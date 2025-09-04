@@ -64,7 +64,7 @@ defineProps<{
   width: var(--led-size);
   height: var(--led-size);
   display: inline-block;
-  background: var(--red-led);
+  background: var(--red);
   border-radius: 50%;
   margin: 0 0.1rem;
   box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);

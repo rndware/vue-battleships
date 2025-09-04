@@ -60,7 +60,7 @@ const startGame = () => {
 .intro__start-button {
   padding: 1rem 2rem;
   font-size: 1.25rem;
-  background: var(--red);
+  background: var(--red-action);
   border: none;
   border-radius: 12px;
   color: white;

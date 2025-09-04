@@ -13,7 +13,7 @@ defineEmits<{
 
 <style scoped>
 .btn-fire {
-  background-color: var(--red);
+  background-color: var(--red-action);
   color: white;
   font-weight: bold;
   border: none;
