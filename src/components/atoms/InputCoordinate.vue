@@ -24,7 +24,7 @@ const emit = defineEmits<{
 const onInput = (event: Event) => {
   const target = event.target as HTMLInputElement
   let value = target.value.toUpperCase()
-  value = value.replace(/[^A-J0-9]/g, '').substring(0, 3)
+  value = value.replace(/[^A-J0-9]/g, '').substring(0, 3) // strip out invalid chars
   emit('update:modelValue', value)
 }
 
