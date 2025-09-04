@@ -2,7 +2,7 @@
 
 A simple and fun Battleships game
 
-<img src="https://github.com/rndware/todos-nuxt/blob/main/media/battleships-screenshot.png" width="65%" />
+<img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot.png" width="65%" />
 
 - Clean and maintainable CSS using BEM and custom properties
 - Built with configurability in mind
