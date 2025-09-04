@@ -1,0 +1,41 @@
+# Vue Battleships
+
+A simple and fun Battleships game
+
+<img src="https://github.com/rndware/todos-nuxt/blob/master/media/battleships-screenshot.png" width="65%" />
+
+- Clean and maintainable CSS using BEM and custom properties
+- Built with configurability in mind
+- Comprehensive Vitest coverage for components, composables, and helpers
+- Organized with the [Atomic Design Methadology](https://atomicdesign.bradfrost.com/chapter-2/) for scalable architecture
+- Written in TypeScript for full type safety
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```

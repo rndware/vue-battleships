@@ -1,0 +1,31 @@
+{
+  "appName": "Vue Battleships",
+  "version": "1.0.0",
+  "author": "Adam Smith",
+  "description": "A simple battleships game built with Vue.js",
+  "data": {
+    "grid": {
+      "rows": 10,
+      "cols": 10
+    },
+    "ships": [
+      {
+        "name": "Battleship",
+        "size": 5
+      },
+      {
+        "name": "Destroyer",
+        "size": 4
+      },
+      {
+        "name": "Submarine",
+        "size": 3
+      }
+    ],
+    "cellEmoji": {
+      "sunk": "🔥",
+      "hit": "💥",
+      "miss": "💦"
+    }
+  }
+}
