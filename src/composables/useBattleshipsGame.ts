@@ -1,6 +1,7 @@
 import { ref, computed } from 'vue'
 import { parseCoordinate, canPlaceShip } from '@/helpers/grid'
 import type { GridCellData, Ship, Coordinate, MessageType } from '@/types'
+import { useSounds } from './useSounds'
 import config from '@/config/app.json'
 
 export function useBattleshipsGame() {
@@ -10,6 +11,7 @@ export function useBattleshipsGame() {
   const hits = ref(0)
   const message = ref<string>('')
   const messageType = ref<MessageType>('')
+  const sounds = useSounds()
 
   const gameWon = computed(() => ships.value.every((ship) => ship.hits >= ship.size))
   const shipsRemaining = computed(() => ships.value.filter((ship) => ship.hits < ship.size).length)
@@ -70,12 +72,14 @@ export function useBattleshipsGame() {
     if (cell.ship !== null) {
       cell.hit = true
       hits.value++
-      const ship = ships.value[cell.ship]
-      ship.hits++
 
-      if (ship.hits >= ship.size) {
-        ship.positions.forEach((pos) => (grid.value[pos.row][pos.col].sunk = true))
-        message.value = `🎯 Direct Hit! You sunk the ${ship.name}!`
+      const currentShip = ships.value[cell.ship]
+      currentShip.hits++
+
+      if (currentShip.hits >= currentShip.size) {
+        currentShip.positions.forEach((pos) => (grid.value[pos.row][pos.col].sunk = true))
+        sounds.play('sunk')
+        message.value = `🎯 Direct Hit! You sunk the ${currentShip.name}!`
         messageType.value = 'sunk'
 
         if (gameWon.value) {
@@ -85,6 +89,7 @@ export function useBattleshipsGame() {
           }, 500)
         }
       } else {
+        sounds.play('hit')
         message.value = `🎯 Direct Hit!`
         messageType.value = 'hit'
       }

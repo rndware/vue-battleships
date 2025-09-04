@@ -4,10 +4,11 @@ A simple and fun Battleships game
 
 <img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot.png" width="65%" />
 
-- Clean and maintainable CSS using BEM and custom properties
+- Clean, maintainable CSS using BEM and custom properties
 - Built with configurability in mind
 - Comprehensive Vitest coverage for components, composables, and helpers
 - Organized with the [Atomic Design Methadology](https://atomicdesign.bradfrost.com/chapter-2/) for scalable architecture
+- Includes immersive sound effects
 - Written in TypeScript for full type safety
 
 TO-DO:
