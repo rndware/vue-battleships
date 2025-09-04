@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import config from '../../../config/app.json'
-import { useBattleshipsGame } from '../../../composables/useBattleshipsGame'
-import type { Coordinate } from '../../../types'
+import config from '../../config/app.json'
+import { useBattleshipsGame } from '../useBattleshipsGame'
+import type { Coordinate } from '../../types'
 
 describe('useBattleshipsGame', () => {
   beforeEach(() => {

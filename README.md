@@ -10,6 +10,10 @@ A simple and fun Battleships game
 - Organized with the [Atomic Design Methadology](https://atomicdesign.bradfrost.com/chapter-2/) for scalable architecture
 - Written in TypeScript for full type safety
 
+TO-DO:
+
+- Add grba colours to CSS custom properties
+
 ## Project Setup
 
 ```sh

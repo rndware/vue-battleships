@@ -28,7 +28,7 @@ describe('Atoms / InputCoordinate.vue', () => {
   })
 
   it('truncates input longer than 3 chars', async () => {
-    const wrapper = mount(InputCoordinate)
+    const wrapper = mount(InputCoordinate, { props: { modelValue: '' } })
     const input = wrapper.find('input')
 
     await input.setValue('A10B')
@@ -36,7 +36,7 @@ describe('Atoms / InputCoordinate.vue', () => {
   })
 
   it('emits submit on Enter key', async () => {
-    const wrapper = mount(InputCoordinate)
+    const wrapper = mount(InputCoordinate, { props: { modelValue: '' } })
     const input = wrapper.find('input')
 
     await input.trigger('keyup.enter')

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { isCellFree, isValidInput } from '../../../helpers/validations'
-import type { GridCellData } from '../../../types'
+import { isCellFree, isValidInput } from '../validations'
+import type { GridCellData } from '../../types'
 
 describe('isCellFree', () => {
   it('returns true for a cell that is not hit, missed, or sunk', () => {

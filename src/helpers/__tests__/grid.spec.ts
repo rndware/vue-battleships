@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import type { GridCellData } from '../../../types'
-import { parseCoordinate, canPlaceShip } from '../../../helpers/grid'
-import config from '../../../config/app.json'
+import type { GridCellData } from '../../types'
+import { parseCoordinate, canPlaceShip } from '../grid'
+import config from '../../config/app.json'
 
 const { rows, cols } = config.data.grid
 

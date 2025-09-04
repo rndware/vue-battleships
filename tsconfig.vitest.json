@@ -3,7 +3,6 @@
   "include": [
     "src/**/__tests__/*",
     "env.d.ts",
-    "src/components/__tests__/atoms/ButtonFire.spec.ts"
   ],
   "exclude": [],
   "compilerOptions": {
