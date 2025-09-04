@@ -16,10 +16,6 @@
       {
         "name": "Destroyer",
         "size": 4
-      },
-      {
-        "name": "Submarine",
-        "size": 3
       }
     ],
     "cellEmoji": {
