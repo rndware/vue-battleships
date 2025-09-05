@@ -4,10 +4,6 @@
   </span>
 </template>
 
-<script setup lang="ts">
-/* no props needed — it just styles whatever text is inside */
-</script>
-
 <style scoped>
 .info-label {
   display: block;
