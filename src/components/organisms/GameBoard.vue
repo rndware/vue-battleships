@@ -1,5 +1,5 @@
 <template>
-  <div class="game-board" :class="{ 'game-board--disabled': !enabled }">
+  <div class="game-board">
     <!-- Column headers -->
     <div class="game-board__header">
       <div class="game-board__corner"></div>
@@ -61,7 +61,6 @@ const getContent = (cell: GridCellData) => {
   overflow: hidden;
 }
 
-/* Header row */
 .game-board__header {
   display: flex;
 }

@@ -2,7 +2,7 @@
   <section class="game-info">
     <InfoItem label="Shots Fired" :value="shotsFired" />
     <InfoItem label="Hits" :value="hits" />
-    <InfoItem label="Shots Remaining" :value="shotsRemaining" />
+    <InfoItem label="Shots Remaining" :value="shotsRemaining" :warning="shotsRemaining < 3" />
     <InfoItem label="Ships Remaining" :value="shipsRemaining" />
   </section>
 </template>

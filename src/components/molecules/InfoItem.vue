@@ -1,7 +1,7 @@
 <template>
   <div class="info-item">
     <InfoLabel>{{ label }}</InfoLabel>
-    <InfoValue>{{ value }}</InfoValue>
+    <InfoValue :class="{ warning: warning }">{{ value }}</InfoValue>
   </div>
 </template>
 
@@ -12,11 +12,16 @@ import InfoValue from '@/components/atoms/InfoValue.vue'
 defineProps<{
   label: string
   value: string | number
+  warning?: boolean
 }>()
 </script>
 
 <style scoped>
 .info-item {
   text-align: center;
+
+  .warning {
+    color: var(--red);
+  }
 }
 </style>
