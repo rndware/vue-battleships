@@ -60,6 +60,11 @@ export function useBattleshipsGame() {
           placed = true
         }
       }
+
+      if (!placed)
+        throw new Error(
+          `Failed to place ship: ${ship.name} after ${attempts} attempts. Is the grid too small?`,
+        )
     })
   }
 

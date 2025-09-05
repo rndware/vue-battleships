@@ -5,6 +5,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/error',
+      name: 'error',
+      component: () => import('../views/ErrorView.vue'),
+    },
+    {
       path: '/',
       name: 'intro',
       component: IntroView,

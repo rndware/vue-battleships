@@ -30,9 +30,9 @@ const startGame = () => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  color: black;
+  color: var(--black);
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
 }
 
 .intro__content {
@@ -42,7 +42,7 @@ const startGame = () => {
 .intro__logo {
   font-size: 5rem;
   margin-bottom: 1rem;
-  animation: intro__float 2s ease-in-out infinite;
+  animation: intro__float var(--long-transition) ease-in-out infinite;
 }
 
 .intro__title {
@@ -66,8 +66,8 @@ const startGame = () => {
   color: white;
   cursor: pointer;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform var(--fast-transition) ease,
+    box-shadow var(--fast-transition) ease;
 }
 
 .intro__start-button:hover {

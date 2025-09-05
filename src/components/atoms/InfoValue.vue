@@ -4,10 +4,6 @@
   </span>
 </template>
 
-<script setup lang="ts">
-/* no props needed — content comes from the slot */
-</script>
-
 <style scoped>
 .info-value {
   font-weight: bold;

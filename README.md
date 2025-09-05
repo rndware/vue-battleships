@@ -14,6 +14,7 @@ A simple and fun Battleships game
 TO-DO:
 
 - Add grba colours to CSS custom properties
+- Rationalize unit usage (rem vs px) across the app
 
 ## Project Setup
 
