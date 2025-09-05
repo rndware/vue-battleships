@@ -16,6 +16,7 @@ TO-DO:
 - Add grba colours to CSS custom properties
 - Rationalize unit usage (rem vs px) across the app
 - Remove `any` types on unit tests
+- Move sound & message logic out of useBattleshipsGame.ts
 
 ## Project Setup
 
