@@ -7,7 +7,7 @@ A simple and fun Battleships game
 - Clean, maintainable CSS using BEM and custom properties
 - Built with configurability in mind
 - Comprehensive Vitest coverage for components, composables, and helpers
-- Organized with the [Atomic Design Methadology](https://atomicdesign.bradfrost.com/chapter-2/) for scalable architecture
+- Organised with the [Atomic Design Methadology](https://atomicdesign.bradfrost.com/chapter-2/) for scalable architecture
 - Includes immersive sound effects
 - Written in TypeScript for full type safety
 

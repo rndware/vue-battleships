@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { useSounds } from '../useSounds'
 
-describe('useSound', () => {
+describe('useSounds', () => {
   const playMock = vi.fn()
   const AudioMock = vi.fn().mockImplementation((src: string) => {
     return {

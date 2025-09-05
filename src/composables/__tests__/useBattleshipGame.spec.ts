@@ -3,6 +3,19 @@ import config from '../../config/app.json'
 import { useBattleshipsGame } from '../useBattleshipsGame'
 import type { Coordinate } from '../../types'
 
+const playMock = vi.fn()
+vi.stubGlobal(
+  'Audio',
+  class {
+    src = ''
+    currentTime = 0
+    play = playMock
+    constructor(src?: string) {
+      if (src) this.src = src
+    }
+  },
+)
+
 describe('useBattleshipsGame', () => {
   beforeEach(() => {
     vi.restoreAllMocks()
