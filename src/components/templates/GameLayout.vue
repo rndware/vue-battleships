@@ -88,7 +88,7 @@ const inputValue = ref('')
   margin-bottom: 30px;
 }
 
-.game__board-container {
+.game__grid-container {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
