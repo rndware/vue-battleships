@@ -33,7 +33,7 @@
 import { computed } from 'vue'
 import { ref } from 'vue'
 
-import type { MessageType, Coordinate, GridCell, Ship, GameInfoData } from '@/types'
+import type { MessageType, Coordinate, GridCellData, Ship, GameInfoData } from '@/types'
 import { isValidInput } from '@/helpers/validations'
 import GameInfo from '@/components/organisms/GameInfo.vue'
 import GameGrid from '@/components/organisms/GameBoard.vue'
@@ -45,7 +45,7 @@ import GameMessage from '@/components/atoms/GameMessage.vue'
 
 const props = defineProps<{
   info: GameInfoData
-  grid: GridCell[][]
+  grid: GridCellData[][]
   input: { placeholder?: string }
   message?: { type: MessageType; text: string }
   ships: Ship[]
