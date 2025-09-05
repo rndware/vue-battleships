@@ -17,13 +17,13 @@ const isWithinGridBounds = (row: number, col: number): boolean => {
 /**
  * Parses a user input string into a grid coordinate.
  *
- * Accepts inputs like "A1", "B5", "J10".
+ * Accepts inputs like "A1", "B5", "J10", "K11",
  *
  * @param input - The coordinate string.
  * @returns A valid Coordinate object if input is valid and within bounds, otherwise null.
  */
 export const parseCoordinate = (input: string): Coordinate | null => {
-  const match = input.toUpperCase().match(/^([A-J])(10|[1-9])$/)
+  const match = input.toUpperCase().match(/^([A-Z])(\d{1,2})$/)
   if (!match) return null
 
   const col = match[1].charCodeAt(0) - 65 // letter to index
