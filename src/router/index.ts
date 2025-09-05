@@ -5,11 +5,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/error',
-      name: 'error',
-      component: () => import('../views/ErrorView.vue'),
-    },
-    {
       path: '/',
       name: 'intro',
       component: IntroView,
@@ -18,6 +13,16 @@ const router = createRouter({
       path: '/game',
       name: 'game',
       component: () => import('../views/GameView.vue'),
+    },
+    {
+      path: '/error',
+      name: 'error',
+      component: () => import('../views/ErrorView.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFound.vue'),
     },
   ],
 })
