@@ -1,5 +1,5 @@
 <template>
-  <div class="game-board">
+  <div class="game-board" :class="{ 'game-board--disabled': !enabled }">
     <!-- Column headers -->
     <div class="game-board__header">
       <div class="game-board__corner"></div>
@@ -20,6 +20,7 @@
           v-for="(cell, colIndex) in row"
           :key="colIndex"
           :status="getStatus(cell)"
+          :disabled="disabled"
           @click="$emit('fire', { row: rowIndex, col: colIndex })"
         >
           {{ getContent(cell) }}
@@ -36,7 +37,7 @@ import config from '@/config/app.json'
 
 const cellEmoji = config.data.cellEmoji
 
-defineProps<{ grid: GridCellData[][] }>()
+defineProps<{ grid: GridCellData[][]; disabled: boolean }>()
 defineEmits(['fire'])
 
 const getStatus = (cell: GridCellData) => {

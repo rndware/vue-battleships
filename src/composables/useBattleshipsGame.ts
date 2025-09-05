@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
 import { parseCoordinate, canPlaceShip } from '@/helpers/grid'
-import type { GridCellData, Ship, Coordinate, MessageType } from '@/types'
+import type { GridCellData, Ship, Coordinate, MessageType, GameStatus } from '@/types'
 import { useSounds } from './useSounds'
 import config from '@/config/app.json'
 
@@ -13,7 +13,9 @@ export function useBattleshipsGame() {
   const messageType = ref<MessageType>('')
   const sounds = useSounds()
 
-  const gameWon = computed(() => ships.value.every((ship) => ship.hits >= ship.size))
+  const gameStatus = ref<GameStatus>('in-progress')
+
+  const shotsRemaining = computed(() => config.data.maxShots - shotsFired.value)
   const shipsRemaining = computed(() => ships.value.filter((ship) => ship.hits < ship.size).length)
 
   const initializeGrid = () => {
@@ -70,7 +72,7 @@ export function useBattleshipsGame() {
 
   const fireAt = (coords: Coordinate) => {
     const cell = grid.value[coords.row][coords.col]
-    if (cell.hit || cell.miss || gameWon.value) return
+    if (cell.hit || cell.miss || gameStatus.value !== 'in-progress') return
 
     shotsFired.value++
 
@@ -87,11 +89,12 @@ export function useBattleshipsGame() {
         message.value = `🎯 Direct Hit! You sunk the ${currentShip.name}!`
         messageType.value = 'sunk'
 
-        if (gameWon.value) {
-          setTimeout(() => {
-            message.value = `🏆 Victory! You destroyed all ships in ${shotsFired.value} shots!`
-            messageType.value = 'win'
-          }, 500)
+        const allSunk = ships.value.every((s) => s.hits >= s.size)
+        if (allSunk) {
+          message.value = `🏆 Victory! You destroyed all ships in ${shotsFired.value} shots!`
+          messageType.value = 'win'
+          gameStatus.value = 'win'
+          return
         }
       } else {
         sounds.play('hit')
@@ -103,6 +106,12 @@ export function useBattleshipsGame() {
       message.value = `${config.data.cellEmoji.miss} Miss!`
       messageType.value = 'miss'
     }
+
+    if (shotsRemaining.value <= 0) {
+      message.value = `💥 Defeat! You ran out of shots after ${shotsFired.value} attempts.`
+      messageType.value = 'lose'
+      gameStatus.value = 'lose'
+    }
   }
 
   const fireAtCoordinate = (coordInput: string) => {
@@ -111,6 +120,7 @@ export function useBattleshipsGame() {
   }
 
   const resetGame = () => {
+    gameStatus.value = 'in-progress'
     shotsFired.value = 0
     hits.value = 0
     message.value = ''
@@ -130,7 +140,8 @@ export function useBattleshipsGame() {
     message,
     messageType,
     shipsRemaining,
-    gameWon,
+    shotsRemaining,
+    gameStatus,
     fireAt,
     fireAtCoordinate,
     resetGame,

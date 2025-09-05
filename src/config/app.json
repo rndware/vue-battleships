@@ -4,6 +4,7 @@
   "author": "Adam Smith",
   "description": "A simple battleships game built with Vue.js",
   "data": {
+    "maxShots": 50,
     "grid": {
       "rows": 10,
       "cols": 10

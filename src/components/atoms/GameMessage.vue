@@ -49,6 +49,13 @@ defineProps<{
   animation: winPulse 1s ease-out infinite;
 }
 
+.game-message--lose {
+  background: linear-gradient(45deg, var(--black), var(--black-light));
+  color: var(--white);
+  font-size: 1.5rem;
+  animation: winPulse 1s ease-out infinite;
+}
+
 @keyframes winPulse {
   0%,
   100% {

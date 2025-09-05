@@ -2,6 +2,7 @@
   <section class="game-info">
     <InfoItem label="Shots Fired" :value="shotsFired" />
     <InfoItem label="Hits" :value="hits" />
+    <InfoItem label="Shots Remaining" :value="shotsRemaining" />
     <InfoItem label="Ships Remaining" :value="shipsRemaining" />
   </section>
 </template>
@@ -12,6 +13,7 @@ import InfoItem from '@/components/molecules/InfoItem.vue'
 defineProps<{
   shotsFired: number
   hits: number
+  shotsRemaining: number
   shipsRemaining: number
 }>()
 </script>

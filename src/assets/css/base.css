@@ -30,11 +30,12 @@
   --green-filled: #2ecc71;
 
   --black: #000;
+  --black-light: #222;
 
   --gray: #ccc;
   --gray-mid: #aeaeae;
   --gray-dark: #666;
-  --gray-lighter: #ecf0f1;
+  --gray-light: #ecf0f1;
   --gray-disabled: #aaa;
 
   --white: #fff;

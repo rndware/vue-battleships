@@ -21,6 +21,9 @@ export interface GameInfoData {
   shotsFired: number
   hits: number
   shipsRemaining: number
+  shotsRemaining: number
 }
 
-export type MessageType = '' | 'hit' | 'miss' | 'sunk' | 'win'
+export type GameStatus = 'win' | 'lose' | 'in-progress'
+
+export type MessageType = '' | 'hit' | 'miss' | 'sunk' | 'win' | 'lose'

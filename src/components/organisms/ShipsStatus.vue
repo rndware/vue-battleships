@@ -43,7 +43,7 @@ defineProps<{
   justify-content: space-between;
   align-items: center;
   padding: 0.25rem 0;
-  border-bottom: 1px solid var(--gray-lighter);
+  border-bottom: 1px solid var(--gray-light);
 }
 
 .fleet-status__ship:last-child {

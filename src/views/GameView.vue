@@ -1,11 +1,11 @@
 <template>
   <GameLayout
-    :info="{ shotsFired, hits, shipsRemaining }"
+    :info="{ shotsFired, hits, shipsRemaining, shotsRemaining }"
     :grid="grid"
     :input="{ placeholder: '(e.g. B4)' }"
     :message="{ type: messageType, text: message }"
     :ships="ships"
-    :game-won="gameWon"
+    :game-status="gameStatus"
     @fire="fireAt"
     @submit="fireAtCoordinate"
     @new-game="resetGame"
@@ -25,8 +25,9 @@ const {
   hits,
   message,
   messageType,
-  gameWon,
+  gameStatus,
   shipsRemaining,
+  shotsRemaining,
   fireAt,
   fireAtCoordinate,
   resetGame,

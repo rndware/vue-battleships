@@ -1,5 +1,9 @@
 <template>
-  <div class="grid-cell" :class="statusClass" @click="$emit('click')">
+  <div
+    class="grid-cell"
+    :class="[statusClass, { disabled: props.disabled }]"
+    @click="$emit('click')"
+  >
     <slot />
   </div>
 </template>
@@ -8,7 +12,7 @@
 import { computed } from 'vue'
 import type { MessageType } from '@/types'
 
-const props = defineProps<{ status?: MessageType }>()
+const props = defineProps<{ status?: MessageType; disabled: boolean }>()
 
 const statusClass = computed(() => {
   return props.status ? `grid-cell--${props.status}` : ''
@@ -32,7 +36,7 @@ const statusClass = computed(() => {
   overflow: hidden;
 }
 
-.grid-cell:hover:not(.grid-cell--hit):not(.grid-cell--miss):not(.grid-cell--sunk) {
+.grid-cell:hover:not(.grid-cell--hit):not(.grid-cell--miss):not(.grid-cell--sunk):not(.disabled) {
   background: var(--blue-light);
   background: var(--blue-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

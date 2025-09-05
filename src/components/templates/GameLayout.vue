@@ -7,11 +7,16 @@
     <GameInfo
       :shots-fired="info.shotsFired"
       :hits="info.hits"
+      :shots-remaining="info.shotsRemaining"
       :ships-remaining="info.shipsRemaining"
     />
 
-    <div class="game__board-container">
-      <GameBoard :grid="grid" @fire="$emit('fire', $event)" />
+    <div class="game__grid-container">
+      <GameBoard
+        :grid="grid"
+        :disabled="gameStatus !== 'in-progress'"
+        @fire="$emit('fire', $event)"
+      />
     </div>
 
     <InputSection
@@ -23,7 +28,7 @@
 
     <div class="game__message-container">
       <GameMessage v-if="message" :text="message.text" :type="message.type" />
-      <ButtonNew v-if="gameWon" @click="$emit('new-game')" />
+      <ButtonNew v-if="gameStatus === 'win' || gameStatus === 'lose'" @click="$emit('new-game')" />
     </div>
     <ShipsStatus :ships="ships" />
   </div>
@@ -33,13 +38,12 @@
 import { computed } from 'vue'
 import { ref } from 'vue'
 
-import type { MessageType, Coordinate, GridCellData, Ship, GameInfoData } from '@/types'
+import type { MessageType, Coordinate, GridCellData, Ship, GameInfoData, GameStatus } from '@/types'
 import { isValidInput } from '@/helpers/validations'
 import GameInfo from '@/components/organisms/GameInfo.vue'
 import GameBoard from '@/components/organisms/GameBoard.vue'
 import InputSection from '@/components/organisms/InputSection.vue'
 import ShipsStatus from '@/components/organisms/ShipsStatus.vue'
-
 import ButtonNew from '@/components/atoms/ButtonNew.vue'
 import GameMessage from '@/components/atoms/GameMessage.vue'
 
@@ -49,7 +53,7 @@ const props = defineProps<{
   input: { placeholder?: string }
   message?: { type: MessageType; text: string }
   ships: Ship[]
-  gameWon: boolean
+  gameStatus: GameStatus
 }>()
 
 defineEmits<{
@@ -58,7 +62,9 @@ defineEmits<{
   (e: 'new-game'): void
 }>()
 
-const disabled = computed(() => !isValidInput(inputValue.value, props.grid) || props.gameWon)
+const disabled = computed(
+  () => !isValidInput(inputValue.value, props.grid) || props.gameStatus !== 'in-progress',
+)
 const inputValue = ref('')
 </script>
 
