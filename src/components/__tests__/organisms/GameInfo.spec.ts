@@ -34,13 +34,13 @@ describe('Organisms / GameInfo.vue', () => {
     expect(items.map((i) => i.props('value'))).toEqual([10, 4, 2, 3])
   })
 
-  it('applies warning when shotsRemaining is less than 3', () => {
+  it('applies warning when shotsRemaining is less than or equal to 3', () => {
     const wrapper = mount(GameInfo, { props: { ...props, shotsRemaining: 1 } })
     const items = wrapper.findAllComponents(InfoItem)
     expect(items[2].props('warning')).toBe(true)
   })
 
-  it('does not apply warning when shotsRemaining is 3 or more', () => {
+  it('does not apply warning when shotsRemaining more than 3', () => {
     const wrapper = mount(GameInfo, { props: { ...props, shotsRemaining: 5 } })
     const items = wrapper.findAllComponents(InfoItem)
     expect(items[2].props('warning')).toBe(false)

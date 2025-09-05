@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="grid-cell"
-    :class="[statusClass, { disabled: props.disabled }]"
-    @click="!props.disabled && $emit('click')"
-  >
+  <div class="grid-cell" :class="[statusClass, { disabled: props.disabled }]" @click="handleClick">
     <slot />
   </div>
 </template>
@@ -14,9 +10,19 @@ import type { MessageType } from '@/types'
 
 const props = defineProps<{ status?: MessageType; disabled?: boolean }>()
 
+const emit = defineEmits<{
+  (e: 'click'): void
+}>()
+
 const statusClass = computed(() => {
   return props.status ? `grid-cell--${props.status}` : ''
 })
+
+const handleClick = () => {
+  if (!props.disabled) {
+    emit('click')
+  }
+}
 </script>
 
 <style scoped>
