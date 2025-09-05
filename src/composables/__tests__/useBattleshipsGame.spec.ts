@@ -80,6 +80,26 @@ describe('useBattleshipsGame', () => {
     expect(messageType.value).toBe('sunk')
   })
 
+  it('ends the game with loss when shots run out', () => {
+    const game = useBattleshipsGame()
+
+    // Directly set shotsFired to maxShots - 1
+    game.shotsFired.value = config.data.maxShots - 1
+
+    const emptyCell: Coordinate = { row: 0, col: 0 }
+
+    // ensure empty cell
+    emptyCell.row = game.grid.value.findIndex((row) => row.some((c) => c.ship === null))
+    emptyCell.col = game.grid.value[emptyCell.row].findIndex((c) => c.ship === null)
+
+    game.fireAt(emptyCell)
+
+    expect(game.shotsRemaining.value).toBe(0)
+    expect(game.gameStatus.value).toBe('lose')
+    expect(game.messageType.value).toBe('lose')
+    expect(game.message.value).toContain('Defeat')
+  })
+
   it('resets the game properly', () => {
     const game = useBattleshipsGame()
 
@@ -91,6 +111,7 @@ describe('useBattleshipsGame', () => {
     expect(game.shotsFired.value).toBe(0)
     expect(game.hits.value).toBe(0)
     expect(game.message.value).toBe('')
+    expect(game.gameStatus.value).toBe('in-progress')
     expect(game.messageType.value).toBe('')
     expect(game.ships.value.length).toBe(config.data.ships.length)
   })

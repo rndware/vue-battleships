@@ -1,6 +1,6 @@
 {
   "appName": "Vue Battleships",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Adam Smith",
   "description": "A simple battleships game built with Vue.js",
   "data": {

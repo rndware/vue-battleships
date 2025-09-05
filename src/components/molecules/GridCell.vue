@@ -58,6 +58,11 @@ const statusClass = computed(() => {
   }
 }
 
+/* // TO-DO: make more bem like */
+.grid-cell.disabled {
+  cursor: default;
+}
+
 .grid-cell--hit {
   background: var(--orange);
   color: var(--white);

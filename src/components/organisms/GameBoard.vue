@@ -37,7 +37,7 @@ import config from '@/config/app.json'
 
 const cellEmoji = config.data.cellEmoji
 
-defineProps<{ grid: GridCellData[][]; disabled: boolean }>()
+defineProps<{ grid: GridCellData[][]; disabled?: boolean }>()
 defineEmits(['fire'])
 
 const getStatus = (cell: GridCellData) => {
