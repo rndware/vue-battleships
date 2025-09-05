@@ -15,7 +15,7 @@ const createGrid = (): GridCellData[][] => [
   ],
 ]
 
-describe('Organisms / GameGrid.vue', () => {
+describe('Organisms / GameBoard.vue', () => {
   it('renders the correct number of rows and columns', () => {
     const grid = createGrid()
     const wrapper = mount(GameBoard, { props: { grid } })

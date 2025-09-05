@@ -5,7 +5,7 @@ import type { GridCellData, GameInfoData, Ship } from '../../../types'
 
 // Mock subcomponents to simplify testing
 vi.mock('@/components/organisms/GameInfo.vue', () => ({ default: { template: '<div />' } }))
-vi.mock('@/components/organisms/GameGrid.vue', () => ({ default: { template: '<div />' } }))
+vi.mock('@/components/organisms/GameBoard.vue', () => ({ default: { template: '<div />' } }))
 vi.mock('@/components/organisms/InputSection.vue', () => ({ default: { template: '<div />' } }))
 vi.mock('@/components/organisms/ShipsStatus.vue', () => ({ default: { template: '<div />' } }))
 vi.mock('@/components/atoms/ButtonNew.vue', () => ({ default: { template: '<button />' } }))
@@ -29,7 +29,7 @@ describe('Templates / GameLayout.vue', () => {
     expect(wrapper.find('.game__title').text()).toBe('Custom Title')
   })
 
-  it('emits "fire" event from GameGrid', async () => {
+  it('emits "fire" event from GameBoard', async () => {
     const wrapper = mount(GameLayout, { props: { info, grid, ships, gameWon: false, input: {} } })
     await wrapper.vm.$emit('fire', { row: 0, col: 0 })
     expect(wrapper.emitted('fire')).toBeTruthy()

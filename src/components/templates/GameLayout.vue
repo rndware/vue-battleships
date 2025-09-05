@@ -10,8 +10,8 @@
       :ships-remaining="info.shipsRemaining"
     />
 
-    <div class="game__grid-container">
-      <GameGrid :grid="grid" @fire="$emit('fire', $event)" />
+    <div class="game__board-container">
+      <GameBoard :grid="grid" @fire="$emit('fire', $event)" />
     </div>
 
     <InputSection
@@ -36,7 +36,7 @@ import { ref } from 'vue'
 import type { MessageType, Coordinate, GridCellData, Ship, GameInfoData } from '@/types'
 import { isValidInput } from '@/helpers/validations'
 import GameInfo from '@/components/organisms/GameInfo.vue'
-import GameGrid from '@/components/organisms/GameBoard.vue'
+import GameBoard from '@/components/organisms/GameBoard.vue'
 import InputSection from '@/components/organisms/InputSection.vue'
 import ShipsStatus from '@/components/organisms/ShipsStatus.vue'
 
@@ -82,7 +82,7 @@ const inputValue = ref('')
   margin-bottom: 30px;
 }
 
-.game__grid-container {
+.game__board-container {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
