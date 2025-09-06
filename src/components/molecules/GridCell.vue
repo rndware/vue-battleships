@@ -1,5 +1,9 @@
 <template>
-  <div class="grid-cell" :class="[statusClass, { disabled: props.disabled }]" @click="handleClick">
+  <div
+    class="grid-cell"
+    :class="[statusClass, { 'grid-cell--disabled': props.disabled }]"
+    @click="handleClick"
+  >
     <slot />
   </div>
 </template>
@@ -31,6 +35,7 @@ const handleClick = () => {
   height: var(--cell-size);
   border: 1px solid var(--light-blue-light);
   background: var(--blue-faded);
+  color: var(--white);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -42,18 +47,16 @@ const handleClick = () => {
   overflow: hidden;
 }
 
-/* TO-DO: refactor */
-.grid-cell:hover:not(.grid-cell--hit):not(.grid-cell--miss):not(.grid-cell--sunk):not(.disabled) {
+.grid-cell:hover:not(.grid-cell--hit):not(.grid-cell--miss):not(.grid-cell--sunk):not(
+    .grid-cell--disabled
+  ) {
   background: var(--blue-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   &:before {
     content: '❌';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: var(--blue-light);
     animation: ripple var(--slow-transition) linear;
 
@@ -64,25 +67,21 @@ const handleClick = () => {
   }
 }
 
-/* // TO-DO: make more bem like */
-.grid-cell.disabled {
+.grid-cell--disabled {
   cursor: default;
 }
 
 .grid-cell--hit {
   background: var(--orange);
-  color: var(--white);
   animation: hitPulse var(--slow-transition) ease-out;
 }
 
 .grid-cell--miss {
   background: var(--blue-light);
-  color: var(--white);
 }
 
 .grid-cell--sunk {
   background: var(--light-blue-light);
-  color: var(--white);
   animation: sunkPulse var(--slower-transition) ease-out;
 }
 
@@ -121,8 +120,8 @@ const handleClick = () => {
 
 @media (max-width: 768px) {
   .grid-cell {
-    width: 35px;
-    height: 35px;
+    width: var(--cell-size-sm);
+    height: var(--cell-size-sm);
     font-size: 16px;
   }
 }

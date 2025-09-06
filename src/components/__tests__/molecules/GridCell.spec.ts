@@ -34,13 +34,13 @@ describe('Molecules / GridCell.vue', () => {
   it('applies disabled class when disabled prop is true', () => {
     const wrapper = mount(GridCell, { props: { disabled: true } })
     const div = wrapper.find('div.grid-cell')
-    expect(div.classes()).toContain('disabled')
+    expect(div.classes()).toContain('grid-cell--disabled')
   })
 
   it('does not apply disabled class when disabled prop is false', () => {
     const wrapper = mount(GridCell, { props: { disabled: false } })
     const div = wrapper.find('div.grid-cell')
-    expect(div.classes()).not.toContain('disabled')
+    expect(div.classes()).not.toContain('grid-cell--disabled')
   })
 
   it('emits click event when clicked and not disabled', async () => {

@@ -86,19 +86,19 @@ export function useBattleshipsGame() {
       if (currentShip.hits >= currentShip.size) {
         currentShip.positions.forEach((pos) => (grid.value[pos.row][pos.col].sunk = true))
         sounds.play('sunk')
-        message.value = `🎯 Direct Hit! You sunk the ${currentShip.name}!`
+        message.value = `${config.data.gameEmoji.hit} Direct Hit! You sunk the ${currentShip.name}!`
         messageType.value = 'sunk'
 
         const allSunk = ships.value.every((s) => s.hits >= s.size)
         if (allSunk) {
-          message.value = `🏆 Victory! You destroyed all ships in ${shotsFired.value} shots!`
+          message.value = `${config.data.gameEmoji.win} Victory! You destroyed all ships in ${shotsFired.value} shots!`
           messageType.value = 'win'
           gameStatus.value = 'win'
           return
         }
       } else {
         sounds.play('hit')
-        message.value = `🎯 Direct Hit!`
+        message.value = `${config.data.gameEmoji.hit} Direct Hit!`
         messageType.value = 'hit'
       }
     } else {
@@ -108,7 +108,7 @@ export function useBattleshipsGame() {
     }
 
     if (shotsRemaining.value <= 0) {
-      message.value = `💥 Defeat! You ran out of shots after ${shotsFired.value} attempts.`
+      message.value = `${config.data.gameEmoji.lose} Defeat! You ran out of shots after ${shotsFired.value} attempts.`
       messageType.value = 'lose'
       gameStatus.value = 'lose'
     }

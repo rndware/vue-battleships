@@ -1,4 +1,3 @@
-<!-- src/components/atoms/ButtonFire.vue -->
 <template>
   <button class="btn-fire" type="button" @click="$emit('click')">
     <slot> 🚀 Fire!</slot>

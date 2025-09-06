@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'intro',
-      component: IntroView,
+      component: IntroView, // Eagerly loaded
     },
     {
       path: '/game',

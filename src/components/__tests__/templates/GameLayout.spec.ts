@@ -20,7 +20,7 @@ describe('Templates / GameLayout.vue', () => {
     const wrapper = mount(GameLayout, {
       props: { info, grid, ships, input: {}, gameStatus: 'in-progress' },
     })
-    expect(wrapper.find('.game__title').text()).toBe('Battleships')
+    expect(wrapper.find('.game-layout__title').text()).toBe('Battleships')
   })
 
   it('renders custom title slot', () => {
@@ -28,7 +28,7 @@ describe('Templates / GameLayout.vue', () => {
       props: { info, grid, ships, input: {}, gameStatus: 'in-progress' },
       slots: { title: '<span>Custom Title</span>' },
     })
-    expect(wrapper.find('.game__title').text()).toBe('Custom Title')
+    expect(wrapper.find('.game-layout__title').text()).toBe('Custom Title')
   })
 
   it('emits "fire" event from GameBoard', async () => {

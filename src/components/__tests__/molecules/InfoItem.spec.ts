@@ -1,4 +1,3 @@
-// tests/components/molecules/InfoItem.test.ts
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import InfoItem from '../../../components/molecules/InfoItem.vue'

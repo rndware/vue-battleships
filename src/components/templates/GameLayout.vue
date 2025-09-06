@@ -1,6 +1,6 @@
 <template>
-  <div class="game">
-    <h1 class="game__title">
+  <div class="game-layout">
+    <h1 class="game-layout__title">
       <slot name="title">Battleships</slot>
     </h1>
 
@@ -11,7 +11,7 @@
       :ships-remaining="info.shipsRemaining"
     />
 
-    <div class="game__grid-container">
+    <div class="game-layout__grid-container">
       <GameBoard
         :grid="grid"
         :disabled="gameStatus !== 'in-progress'"
@@ -26,7 +26,7 @@
       @submit="$emit('submit', inputValue)"
     />
 
-    <div class="game__message-container">
+    <div class="game-layout__message-container">
       <GameMessage v-if="message" :text="message.text" :type="message.type" />
       <ButtonNew v-if="gameStatus === 'win' || gameStatus === 'lose'" @click="$emit('new-game')" />
     </div>
@@ -69,7 +69,7 @@ const inputValue = ref('')
 </script>
 
 <style scoped>
-.game {
+.game-layout {
   min-width: 385px;
   max-width: 550px;
   margin: 10px auto;
@@ -78,23 +78,23 @@ const inputValue = ref('')
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
 }
 
-.game__title {
+.game-layout__title {
   text-align: center;
   font-size: 2.5rem;
   color: var(--dark-blue);
   margin-bottom: 30px;
 }
 
-.game__grid-container {
+.game-layout__grid-container {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.game__message-container {
+.game-layout__message-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,10 +102,10 @@ const inputValue = ref('')
 }
 
 @media (max-width: 768px) {
-  .game {
+  .game-layout {
     padding: 15px;
   }
-  .game__title {
+  .game-layout__title {
     font-size: 2rem;
   }
 }

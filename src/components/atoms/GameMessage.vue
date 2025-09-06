@@ -24,34 +24,29 @@ defineProps<{
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--white);
 }
 
-/* Type-specific styles */
 .game-message--hit {
   background: linear-gradient(45deg, var(--orange), var(--orange-light));
-  color: white;
 }
 
 .game-message--miss {
   background: linear-gradient(45deg, var(--blue), var(--blue-light));
-  color: var(--white);
 }
 
 .game-message--sunk {
   background: linear-gradient(45deg, var(--purple), var(--purple-light));
-  color: var(--white);
 }
 
 .game-message--win {
   background: linear-gradient(45deg, var(--green), var(--green-light));
-  color: var(--white);
   font-size: 1.5rem;
   animation: winPulse 1s ease-out infinite;
 }
 
 .game-message--lose {
   background: linear-gradient(45deg, var(--black), var(--black-light));
-  color: var(--white);
   font-size: 1.5rem;
   animation: winPulse 1s ease-out infinite;
 }

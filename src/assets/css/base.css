@@ -51,6 +51,7 @@
   --led-size: 16px;
   --dot-size: 12px;
   --cell-size: 40px;
+  --cell-size-sm: 35px;
 
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

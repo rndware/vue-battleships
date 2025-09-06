@@ -1,4 +1,3 @@
-<!-- src/components/atoms/ButtonNew.vue -->
 <template>
   <button class="btn-new" type="button" @click="$emit('click')">
     <slot>New Game</slot>
