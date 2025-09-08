@@ -27,7 +27,7 @@ const getContent = () => {
 
 <style scoped>
 .btn-mute {
-  background-color: var(--green);
+  background-color: var(--mid-blue);
   color: var(--white);
   font-weight: bold;
   border: none;
@@ -38,10 +38,10 @@ const getContent = () => {
 }
 
 .btn-mute:hover {
-  background-color: var(--green-hover);
+  background-color: var(--dark-blue);
 }
 
 .btn-mute:active {
-  background-color: var(--green-filled);
+  background-color: var(--blue-active);
 }
 </style>

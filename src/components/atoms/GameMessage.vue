@@ -20,7 +20,7 @@ defineProps<{
   border-radius: 0.5rem;
   font-weight: bold;
   min-height: 2rem;
-  transition: all 0.3s ease;
+  transition: all var(--slow-transition) ease;
   display: flex;
   align-items: center;
   justify-content: center;
