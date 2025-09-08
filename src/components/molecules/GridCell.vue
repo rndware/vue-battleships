@@ -31,6 +31,7 @@ const handleClick = () => {
 
 <style scoped>
 .grid-cell {
+  --base-font-size: var(--cell-font-size);
   width: var(--cell-size);
   height: var(--cell-size);
   border: 1px solid var(--light-blue-light);
@@ -41,7 +42,7 @@ const handleClick = () => {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--base-font-size);
   transition: all var(--fast-transition) ease;
   position: relative;
   overflow: hidden;
@@ -57,13 +58,12 @@ const handleClick = () => {
     content: '❌';
     position: absolute;
     inset: 0;
+    font-size: var(--base-font-size);
     background: var(--blue-light);
-    animation: ripple var(--slow-transition) linear;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
   }
 }
 
@@ -87,42 +87,43 @@ const handleClick = () => {
 
 @keyframes hitPulse {
   0% {
-    transform: scale(1);
+    font-size: var(--base-font-size);
   }
   50% {
-    transform: scale(1.2);
+    font-size: calc(var(--base-font-size) * 1.5);
     background: var(--orange-light);
   }
   100% {
+    font-size: var(--base-font-size);
     transform: scale(1);
   }
 }
 
 @keyframes sunkPulse {
   0% {
-    transform: scale(1);
+    font-size: var(--base-font-size);
   }
   25% {
-    transform: scale(1.1);
+    font-size: calc(var(--base-font-size) * 1.2);
     background: var(--purple-light);
   }
   50% {
-    transform: scale(1.2);
+    font-size: calc(var(--base-font-size) * 1.5);
     background: var(--purple);
   }
   75% {
-    transform: scale(1.1);
+    font-size: calc(var(--base-font-size) * 1.2);
   }
   100% {
-    transform: scale(1);
+    font-size: var(--base-font-size);
   }
 }
 
 @media (max-width: 768px) {
   .grid-cell {
+    --base-font-size: var(--cell-font-size-sm);
     width: var(--cell-size-sm);
     height: var(--cell-size-sm);
-    font-size: 16px;
   }
 }
 </style>
