@@ -24,7 +24,7 @@ defineProps<{
 .fleet-status {
   background: var(--white-background);
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--section-border-radius);
   margin-top: 1rem;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }

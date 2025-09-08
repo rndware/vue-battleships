@@ -13,11 +13,11 @@ defineEmits<{
 <style scoped>
 .btn-fire {
   background-color: var(--red-action);
-  color: white;
+  color: var(--white);
   font-weight: bold;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: var(--btn-border-radius);
   cursor: pointer;
   transition: background-color 0.2s;
 }

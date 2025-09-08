@@ -18,8 +18,7 @@ TO-DO:
 - Remove `any` types on unit tests
 
 Consider:
-- Convert `div` grid to `table` for accessibility
-- 
+- Convert `div` based grid to `table` for accessibility
 
 ## Project Setup
 

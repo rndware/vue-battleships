@@ -40,7 +40,7 @@ const submit = () => {
   text-align: center;
   font-weight: bold;
   border: 2px solid var(--gray);
-  border-radius: 0.5rem;
+  border-radius: var(--btn-border-radius);
   width: 80px;
   transition:
     border-color var(--fast-transition),

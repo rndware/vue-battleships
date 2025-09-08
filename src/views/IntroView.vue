@@ -26,8 +26,8 @@ const startGame = () => {
   font-size: 1.25rem;
   background: var(--red-action);
   border: none;
-  border-radius: 12px;
-  color: white;
+  border-radius: var(--btn-border-radius);
+  color: var(--white);
   cursor: pointer;
   transition:
     transform var(--fast-transition) ease,

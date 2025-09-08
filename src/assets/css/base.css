@@ -58,5 +58,8 @@
   --cell-size: 40px;
   --cell-size-sm: 35px;
 
+  --btn-border-radius: 0.5rem;
+  --section-border-radius: 10px;
+
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
