@@ -3,6 +3,7 @@
     <div class="input-group">
       <InputCoordinate v-model="value" :placeholder="placeholder" @submit="onSubmit" />
       <ButtonFire :disabled="disabled" @click="onSubmit" />
+      <ButtonMute />
     </div>
   </div>
 </template>
@@ -11,6 +12,7 @@
 import { computed } from 'vue'
 import InputCoordinate from '@/components/atoms/InputCoordinate.vue'
 import ButtonFire from '@/components/atoms/ButtonFire.vue'
+import ButtonMute from '@/components/atoms/ButtonMute.vue';
 
 const props = defineProps<{
   modelValue: string

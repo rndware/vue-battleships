@@ -39,4 +39,21 @@ describe('useSounds', () => {
 
     expect(() => play('unknown')).not.toThrow()
   })
+
+  it('should toggle mute and prevent sounds from playing when muted', () => {
+    const { play, toggleMute } = useSounds()
+
+    // Initially, sounds play
+    play('hit')
+    expect(playMock).toHaveBeenCalledTimes(1)
+
+    toggleMute()
+
+    play('hit')
+    expect(playMock).toHaveBeenCalledTimes(1) // no additional calls
+
+    toggleMute()
+    play('hit')
+    expect(playMock).toHaveBeenCalledTimes(2) // play works again
+  })
 })
