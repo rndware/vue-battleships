@@ -1,4 +1,3 @@
-<!-- IntroView.vue -->
 <template>
   <div class="intro-view"></div>
   <InfoLayout

@@ -17,6 +17,10 @@ TO-DO:
 - Rationalize unit usage (rem vs px) across the app
 - Remove `any` types on unit tests
 
+Consider:
+- Convert `div` grid to `table` for accessibility
+- 
+
 ## Project Setup
 
 ```sh

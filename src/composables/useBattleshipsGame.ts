@@ -1,11 +1,13 @@
-import { ref, computed } from 'vue'
+import { ref, computed, shallowReactive } from 'vue'
 import { parseCoordinate, canPlaceShip } from '@/helpers/grid'
 import type { GridCellData, Ship, Coordinate, MessageType, GameStatus } from '@/types'
 import { useSounds } from './useSounds'
 import config from '@/config/app.json'
 
 export function useBattleshipsGame() {
-  const grid = ref<GridCellData[][]>([])
+  // non-reactive grid for performance
+  const grid: GridCellData[][] = []
+
   const ships = ref<Ship[]>([])
   const shotsFired = ref(0)
   const hits = ref(0)
@@ -19,21 +21,21 @@ export function useBattleshipsGame() {
   const shipsRemaining = computed(() => ships.value.filter((ship) => ship.hits < ship.size).length)
 
   const initializeGrid = () => {
-    grid.value = Array(config.data.grid.rows)
-      .fill(null)
-      .map(() =>
-        Array(config.data.grid.cols)
-          .fill(null)
-          .map(
-            () =>
-              ({
-                ship: null,
-                hit: false,
-                sunk: false,
-                miss: false,
-              }) as GridCellData,
-          ),
-      )
+    grid.length = 0
+    for (let r = 0; r < config.data.grid.rows; r++) {
+      const row: GridCellData[] = []
+      for (let c = 0; c < config.data.grid.cols; c++) {
+        row.push(
+          shallowReactive({
+            ship: null,
+            hit: false,
+            sunk: false,
+            miss: false,
+          } as GridCellData),
+        )
+      }
+      grid.push(row)
+    }
   }
 
   const placeShips = () => {
@@ -52,11 +54,11 @@ export function useBattleshipsGame() {
         const row = Math.floor(Math.random() * config.data.grid.rows) // random row
         const col = Math.floor(Math.random() * config.data.grid.cols) // random column
 
-        if (canPlaceShip(row, col, ship.size, horizontal, grid.value)) {
+        if (canPlaceShip(row, col, ship.size, horizontal, grid)) {
           for (let i = 0; i < ship.size; i++) {
             const r = horizontal ? row : row + i
             const c = horizontal ? col + i : col
-            grid.value[r][c].ship = index
+            grid[r][c].ship = index
             ship.positions.push({ row: r, col: c })
           }
           placed = true
@@ -71,7 +73,7 @@ export function useBattleshipsGame() {
   }
 
   const fireAt = (coords: Coordinate) => {
-    const cell = grid.value[coords.row][coords.col]
+    const cell = grid[coords.row][coords.col]
     if (cell.hit || cell.miss || gameStatus.value !== 'in-progress') return
 
     shotsFired.value++
@@ -84,13 +86,12 @@ export function useBattleshipsGame() {
       currentShip.hits++
 
       if (currentShip.hits >= currentShip.size) {
-        currentShip.positions.forEach((pos) => (grid.value[pos.row][pos.col].sunk = true))
+        currentShip.positions.forEach((pos) => (grid[pos.row][pos.col].sunk = true))
         sounds.play('sunk')
         message.value = `${config.data.gameEmoji.hit} Direct Hit! You sunk the ${currentShip.name}!`
         messageType.value = 'sunk'
 
-        const allSunk = ships.value.every((s) => s.hits >= s.size)
-        if (allSunk) {
+        if (ships.value.every((s) => s.hits >= s.size)) {
           message.value = `${config.data.gameEmoji.win} Victory! You destroyed all ships in ${shotsFired.value} shots!`
           messageType.value = 'win'
           gameStatus.value = 'win'

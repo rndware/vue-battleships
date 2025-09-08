@@ -23,8 +23,8 @@ describe('useBattleshipsGame', () => {
 
   it('initializes grid with correct dimensions', () => {
     const { grid } = useBattleshipsGame()
-    expect(grid.value.length).toBe(config.data.grid.rows)
-    expect(grid.value[0].length).toBe(config.data.grid.cols)
+    expect(grid.length).toBe(config.data.grid.rows)
+    expect(grid[0].length).toBe(config.data.grid.cols)
   })
 
   it('places all ships on the grid', () => {
@@ -33,7 +33,7 @@ describe('useBattleshipsGame', () => {
     ships.value.forEach((ship, index) => {
       expect(ship.positions.length).toBe(ship.size)
       ship.positions.forEach(({ row, col }) => {
-        expect(grid.value[row][col].ship).toBe(index)
+        expect(grid[row][col].ship).toBe(index)
       })
     })
   })
@@ -46,7 +46,7 @@ describe('useBattleshipsGame', () => {
 
     expect(shotsFired.value).toBe(1)
     expect(hits.value).toBe(1)
-    expect(grid.value[target.row][target.col].hit).toBe(true)
+    expect(grid[target.row][target.col].hit).toBe(true)
     expect(message.value).toContain('Direct Hit')
     expect(['hit', 'sunk']).toContain(messageType.value)
   })
@@ -56,14 +56,14 @@ describe('useBattleshipsGame', () => {
     const emptyCell: Coordinate = { row: 0, col: 0 }
 
     // ensure empty cell
-    emptyCell.row = grid.value.findIndex((row) => row.some((c) => c.ship === null))
-    emptyCell.col = grid.value[emptyCell.row].findIndex((c) => c.ship === null)
+    emptyCell.row = grid.findIndex((row) => row.some((c) => c.ship === null))
+    emptyCell.col = grid[emptyCell.row].findIndex((c) => c.ship === null)
 
     fireAt(emptyCell)
 
     expect(shotsFired.value).toBe(1)
     expect(hits.value).toBe(0)
-    expect(grid.value[emptyCell.row][emptyCell.col].miss).toBe(true)
+    expect(grid[emptyCell.row][emptyCell.col].miss).toBe(true)
     expect(message.value).toContain('Miss')
     expect(messageType.value).toBe('miss')
   })
@@ -75,7 +75,7 @@ describe('useBattleshipsGame', () => {
     ship.positions.forEach((pos) => fireAt(pos))
 
     ship.positions.forEach((pos) => {
-      expect(grid.value[pos.row][pos.col].sunk).toBe(true)
+      expect(grid[pos.row][pos.col].sunk).toBe(true)
     })
     expect(messageType.value).toBe('sunk')
   })
@@ -89,8 +89,8 @@ describe('useBattleshipsGame', () => {
     const emptyCell: Coordinate = { row: 0, col: 0 }
 
     // ensure empty cell
-    emptyCell.row = game.grid.value.findIndex((row) => row.some((c) => c.ship === null))
-    emptyCell.col = game.grid.value[emptyCell.row].findIndex((c) => c.ship === null)
+    emptyCell.row = game.grid.findIndex((row) => row.some((c) => c.ship === null))
+    emptyCell.col = game.grid[emptyCell.row].findIndex((c) => c.ship === null)
 
     game.fireAt(emptyCell)
 
