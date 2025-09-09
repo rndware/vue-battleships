@@ -1,0 +1,1 @@
+import{d as a,c as t,o,f as r,a as s,l as n,F as l}from"./index-B040LpMc.js";const m=a({__name:"ErrorView",setup(i){return(_,e)=>(o(),t(l,null,[e[0]||(e[0]=r("div",{class:"error-view"},null,-1)),s(n,{logo:"🚢",title:"Error!",subtitle:"Looks like the app sunk instead!",animation:"float__rotated"})],64))}});export{m as default};

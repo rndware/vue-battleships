@@ -1,0 +1,1 @@
+import{d as o,c as t,o as a,f as n,a as s,l,F as r}from"./index-B040LpMc.js";const c=o({__name:"NotFound",setup(u){return(d,e)=>(a(),t(r,null,[e[0]||(e[0]=n("div",{class:"not-found-view"},null,-1)),s(l,{logo:"🚢",title:"Not Found",subtitle:"The page you are looking for does not exist."})],64))}});export{c as default};
