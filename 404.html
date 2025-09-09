@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Battleships</title>
+  <script>
+    // Hack for github pages 404 handling
+    // Redirect all 404s back to the main app
+    // The Vue router will handle the routing client-side
+    const path = window.location.pathname.replace('/vue-battleships', '')
+    const query = window.location.search
+    const hash = window.location.hash
+    
+    window.location.replace('/vue-battleships/' + '?redirect=' + encodeURIComponent(path + query + hash))
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
