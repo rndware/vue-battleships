@@ -60,8 +60,8 @@ defineProps<{
 }
 
 .led {
-  width: var(--led-size);
-  height: var(--led-size);
+  width: var(--size-led);
+  height: var(--size-led);
   display: inline-block;
   background: var(--led-background);
   border-radius: 50%;
