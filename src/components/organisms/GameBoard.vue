@@ -72,20 +72,19 @@ const getContent = (cell: GridCellData) => {
 .game-board__header-cell {
   border: 1px solid transparent;
   width: var(--cell-size);
-  color: var(--dark-blue);
+  color: var(--blue-dark);
   text-align: center;
   font-weight: bold;
   padding: 4px 0;
 }
 
-/* Each row */
 .game-board__row {
   display: flex;
   align-items: center;
 }
 
 .game-board__row-label {
-  color: var(--dark-blue);
+  color: var(--blue-dark);
   width: 30px;
   text-align: center;
   font-weight: bold;

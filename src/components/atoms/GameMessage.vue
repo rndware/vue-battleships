@@ -20,7 +20,7 @@ defineProps<{
   border-radius: 0.5rem;
   font-weight: bold;
   min-height: 2rem;
-  transition: all var(--slow-transition) ease;
+  transition: all var(--duration-slow) ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,25 +28,25 @@ defineProps<{
 }
 
 .game-message--hit {
-  background: linear-gradient(45deg, var(--orange), var(--orange-light));
+  background: linear-gradient(45deg, var(--orange-500), var(--orange-400));
 }
 
 .game-message--miss {
-  background: linear-gradient(45deg, var(--blue), var(--blue-light));
+  background: linear-gradient(45deg, var(--blue-500), var(--blue-400));
 }
 
 .game-message--sunk {
-  background: linear-gradient(45deg, var(--purple), var(--purple-light));
+  background: linear-gradient(45deg, var(--purple-500), var(--purple-400));
 }
 
 .game-message--win {
-  background: linear-gradient(45deg, var(--green), var(--green-light));
+  background: linear-gradient(45deg, var(--green-500), var(--green-400));
   font-size: 1.5rem;
   animation: winPulse 1s ease-out infinite;
 }
 
 .game-message--lose {
-  background: linear-gradient(45deg, var(--black), var(--black-light));
+  background: linear-gradient(45deg, var(--black-900), var(--black-800));
   font-size: 1.5rem;
   animation: winPulse 1s ease-out infinite;
 }

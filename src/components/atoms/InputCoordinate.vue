@@ -39,12 +39,12 @@ const submit = () => {
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
-  border: 2px solid var(--gray);
-  border-radius: var(--btn-border-radius);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-btn);
   width: 80px;
   transition:
-    border-color var(--fast-transition),
-    box-shadow var(--fast-transition);
+    border-color var(--duration-fast),
+    box-shadow var(--duration-fast);
 }
 
 .input-coordinate:focus {

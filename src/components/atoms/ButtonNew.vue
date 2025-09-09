@@ -12,22 +12,22 @@ defineEmits<{
 
 <style scoped>
 .btn-new {
-  background-color: var(--blue);
+  background-color: var(--btn-bg);
   color: var(--white);
   font-weight: bold;
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color var(--duration-fast);
 }
 
 .btn-new:hover {
-  background-color: var(--blue-hover);
+  background-color: var(--btn-bg-hover);
 }
 
 .btn-new:active {
-  background-color: var(--blue-active);
+  background-color: var(--btn-bg-active);
 }
 
 .btn-new:disabled {

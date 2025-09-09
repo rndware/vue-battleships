@@ -26,12 +26,12 @@ const startGame = () => {
   font-size: 1.25rem;
   background: var(--red-action);
   border: none;
-  border-radius: var(--btn-border-radius);
+  border-radius: var(--radius-btn);
   color: var(--white);
   cursor: pointer;
   transition:
-    transform var(--fast-transition) ease,
-    box-shadow var(--fast-transition) ease;
+    transform var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
 }
 
 .intro__start-button:hover {

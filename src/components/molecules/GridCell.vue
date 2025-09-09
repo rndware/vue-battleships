@@ -34,7 +34,7 @@ const handleClick = () => {
   --base-font-size: var(--cell-font-size);
   width: var(--cell-size);
   height: var(--cell-size);
-  border: 1px solid var(--light-blue-light);
+  border: 1px solid var(--light-blue-400);
   background: var(--blue-faded);
   color: var(--white);
   cursor: pointer;
@@ -43,7 +43,7 @@ const handleClick = () => {
   justify-content: center;
   font-weight: bold;
   font-size: var(--base-font-size);
-  transition: all var(--fast-transition) ease;
+  transition: all var(--duration-fast) ease;
   position: relative;
   overflow: hidden;
 }
@@ -51,7 +51,7 @@ const handleClick = () => {
 .grid-cell:hover:not(.grid-cell--hit):not(.grid-cell--miss):not(.grid-cell--sunk):not(
     .grid-cell--disabled
   ) {
-  background: var(--blue-light);
+  background: var(--blue-400);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   &:before {
@@ -59,7 +59,7 @@ const handleClick = () => {
     position: absolute;
     inset: 0;
     font-size: var(--base-font-size);
-    background: var(--blue-light);
+    background: var(--blue-400);
 
     display: flex;
     justify-content: center;
@@ -72,17 +72,17 @@ const handleClick = () => {
 }
 
 .grid-cell--hit {
-  background: var(--orange);
-  animation: hitPulse var(--slow-transition) ease-out;
+  background: var(--orange-500);
+  animation: hitPulse var(--duration-slow) ease-out;
 }
 
 .grid-cell--miss {
-  background: var(--blue-light);
+  background: var(--blue-400);
 }
 
 .grid-cell--sunk {
-  background: var(--light-blue-light);
-  animation: sunkPulse var(--slower-transition) ease-out;
+  background: var(--light-blue-400);
+  animation: sunkPulse var(--duration-slower) ease-out;
 }
 
 @keyframes hitPulse {
@@ -91,7 +91,7 @@ const handleClick = () => {
   }
   50% {
     font-size: calc(var(--base-font-size) * 1.5);
-    background: var(--orange-light);
+    background: var(--orange-400);
   }
   100% {
     font-size: var(--base-font-size);
@@ -105,11 +105,11 @@ const handleClick = () => {
   }
   25% {
     font-size: calc(var(--base-font-size) * 1.2);
-    background: var(--purple-light);
+    background: var(--purple-400);
   }
   50% {
     font-size: calc(var(--base-font-size) * 1.5);
-    background: var(--purple);
+    background: var(--purple-500);
   }
   75% {
     font-size: calc(var(--base-font-size) * 1.2);

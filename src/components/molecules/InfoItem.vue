@@ -21,7 +21,7 @@ defineProps<{
   text-align: center;
 
   .warning {
-    color: var(--red);
+    color: var(--red-500);
   }
 }
 </style>

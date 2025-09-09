@@ -12,22 +12,22 @@ defineEmits<{
 
 <style scoped>
 .btn-fire {
-  background-color: var(--red-action);
-  color: var(--white);
+  background-color: var(--color-danger);
+  color: var(--color-surface);
   font-weight: bold;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--btn-border-radius);
+  border-radius: var(--radius-btn);
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color var(--duration-fast);
 }
 
 .btn-fire:hover {
-  background-color: var(--red-hover);
+  background-color: var(--color-danger-hover);
 }
 
 .btn-fire:active {
-  background-color: var(--red-active);
+  background-color: var(--color-danger-active);
 }
 
 .btn-fire:disabled {

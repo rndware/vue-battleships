@@ -8,7 +8,7 @@
 .info-label {
   display: block;
   font-size: 0.9rem;
-  color: var(--gray-dark);
+  color: var(--gray-600);
   margin-bottom: 5px;
 }
 </style>

@@ -1,0 +1,19 @@
+:root {
+  --btn-radius: var(--radius-btn);
+  --btn-bg: var(--color-primary);
+  --btn-bg-hover: var(--color-primary-hover);
+  --btn-bg-active: var(--color-primary-active);
+  --btn-text: var(--white);
+
+  --led-background: var(--red-500);
+  --led-box-shadow: var(rgba(255, 0, 0, 0.8));
+  --led-dark-blink: rgba(255, 0, 0, 0.2);
+  --led-light-blink: rgba(255, 0, 0, 1);
+
+  --section-radius: var(--radius-section);
+
+  --cell-size: var(--size-cell-400);
+  --cell-size-sm: var(--size-cell-300);
+  --cell-font-size: var(--font-size-400);
+  --cell-font-size-sm: var(--font-size-300);
+}

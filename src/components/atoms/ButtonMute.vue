@@ -27,21 +27,21 @@ const getContent = () => {
 
 <style scoped>
 .btn-mute {
-  background-color: var(--mid-blue);
-  color: var(--white);
+  background-color: var(--blue-mid);
+  color: var(--color-surface);
   font-weight: bold;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--btn-border-radius);
+  border-radius: var(--radius-btn);
   cursor: pointer;
-  transition: background-color var(--fast-transition);
+  transition: background-color var(--duration-fast);
 }
 
 .btn-mute:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--blue-dark);
 }
 
 .btn-mute:active {
-  background-color: var(--blue-active);
+  background-color: var(--blue-700);
 }
 </style>

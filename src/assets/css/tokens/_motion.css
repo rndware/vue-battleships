@@ -1,0 +1,6 @@
+:root {
+  --duration-fast: 0.2s;
+  --duration-slow: 0.6s;
+  --duration-slower: 0.8s;
+  --duration-long: 2s;
+}

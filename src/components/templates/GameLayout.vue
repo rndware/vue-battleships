@@ -78,13 +78,13 @@ const inputValue = ref('')
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   min-height: 100vh;
-  font-family: var(--font-family);
+  font-family: var(--font-family-sans);
 }
 
 .game-layout__title {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--dark-blue);
+  color: var(--blue-dark);
   margin-bottom: 30px;
 }
 

@@ -29,9 +29,9 @@ defineProps<{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  color: var(--black);
+  color: var(--color-text);
   text-align: center;
-  font-family: var(--font-family);
+  font-family: var(--font-family-sans);
 }
 
 .info__content {
@@ -41,17 +41,17 @@ defineProps<{
 .info__logo {
   font-size: 5rem;
   margin-bottom: 1rem;
-  animation: var(--animation) var(--long-transition) ease-in-out infinite;
+  animation: var(--animation) var(--duration-long) ease-in-out infinite;
 }
 
 .info__title {
   font-size: 4rem;
-  color: var(--dark-blue);
+  color: var(--blue-dark);
   margin-bottom: 1rem;
 }
 
 .info__subtitle {
-  color: var(--gray-dark);
+  color: var(--color-text-muted);
   font-size: 1.5rem;
   margin-bottom: 4rem;
 }

@@ -1,0 +1,26 @@
+:root {
+  --color-primary: var(--blue-500);
+  --color-primary-hover: var(--blue-600);
+  --color-primary-active: var(--blue-700);
+
+  --color-secondary: var(--purple-500);
+  --color-secondary-hover: var(--purple-400);
+
+  --color-danger: var(--red-action);
+  --color-danger-hover: var(--red-600);
+  --color-danger-active: var(--red-700);
+
+  --color-success: var(--green-500);
+  --color-success-light: var(--green-400);
+
+  --color-background: var(--white-100);
+  --color-surface: var(--white);
+  --color-surface-alt: var(--white-200);
+
+  --color-border: var(--gray-300);
+  --color-border-muted: var(--gray-400);
+
+  --color-text: var(--black-900);
+  --color-text-muted: var(--gray-600);
+  --color-text-disabled: var(--gray-disabled);
+}
