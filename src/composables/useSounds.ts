@@ -6,8 +6,8 @@ const isMuted = ref(false)
 
 export function useSounds() {
   const sounds: SoundMap = {
-    hit: new Audio('/sounds/explosion.wav'),
-    sunk: new Audio('/sounds/ship-down.wav'),
+    hit: new Audio(`${import.meta.env.BASE_URL}sounds/explosion.wav`),
+    sunk: new Audio(`${import.meta.env.BASE_URL}sounds/ship-down.wav`),
   }
 
   // helper to play a sound by name
