@@ -2,7 +2,7 @@
 
 A simple and fun Battleships game
 
-[play now](https://rndware.github.io/vue-battleships/#/)
+[👉Play now](https://rndware.github.io/vue-battleships/#/)
 
 <img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot.png" width="65%" />
 
