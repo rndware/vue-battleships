@@ -22,14 +22,6 @@ describe('Organisms / GameBoard.vue', () => {
   const grid = createGrid()
   const wrapper = mount(GameBoard, { props: { grid } })
 
-  it('renders the correct number of rows and columns', () => {
-    const rows = wrapper.findAll('.game-board__row')
-    expect(rows.length).toBe(grid.length)
-
-    const firstRowCells = rows[0].findAllComponents(GridCell)
-    expect(firstRowCells.length).toBe(grid[0].length)
-  })
-
   it('renders column headers correctly', () => {
     const headers = wrapper.findAll('.game-board__header-cell')
     expect(headers.length).toBe(grid[0].length)
@@ -39,12 +31,14 @@ describe('Organisms / GameBoard.vue', () => {
 
   it('renders row labels correctly', () => {
     const rowLabels = wrapper.findAll('.game-board__row-label')
+    expect(rowLabels.length).toBe(grid.length)
     expect(rowLabels[0].text()).toBe('1')
     expect(rowLabels[1].text()).toBe('2')
   })
 
   it('renders correct status and content for cells', () => {
     const cells = wrapper.findAllComponents(GridCell)
+    expect(cells.length).toBe(grid.length * grid[0].length)
 
     // cell 0,0: empty
     expect(cells[0].props('status')).toBe('')
@@ -64,8 +58,8 @@ describe('Organisms / GameBoard.vue', () => {
   })
 
   it('emits fire event when a cell is clicked', async () => {
-    const firstCell = wrapper.findAllComponents(GridCell)[0]
-    await firstCell.trigger('click')
+    const cells = wrapper.findAllComponents(GridCell)
+    await cells[0].trigger('click')
 
     expect(wrapper.emitted()).toHaveProperty('fire')
     expect(wrapper.emitted('fire')![0][0]).toEqual({ row: 0, col: 0 })
