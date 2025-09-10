@@ -78,6 +78,22 @@ const getContent = (cell: GridCellData) => {
   padding: 4px 0;
 }
 
+.game-board__header + .game-board__row {
+  .game-board__row-cells {
+    border-top-left-radius: var(--table-corner-radius);
+    border-top-right-radius: var(--table-corner-radius);
+    overflow: hidden;
+  }
+}
+
+.game-board__row:last-child {
+  .game-board__row-cells {
+    border-bottom-left-radius: var(--table-corner-radius);
+    border-bottom-right-radius: var(--table-corner-radius);
+    overflow: hidden;
+  }
+}
+
 .game-board__row {
   display: flex;
   align-items: center;
