@@ -1,13 +1,14 @@
 <template>
-  <div class="intro-view"></div>
-  <InfoLayout
-    logo="🚢"
-    title="Vue Battleships"
-    subtitle="Sink your opponent's fleet before they sink yours!"
-    animation="float"
-  >
-    <button class="intro__start-button" @click="startGame">Start Game</button>
-  </InfoLayout>
+  <div class="intro-view">
+    <InfoLayout
+      logo="🚢"
+      title="Vue Battleships"
+      subtitle="Sink your opponent's fleet before they sink yours!"
+      animation="float"
+    >
+      <button class="intro__start-button" @click="startGame">Start Game</button>
+    </InfoLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

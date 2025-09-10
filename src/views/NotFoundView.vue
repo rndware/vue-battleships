@@ -1,12 +1,10 @@
 <template>
-  <div class="error-view">
+  <div class="not-found">
     <InfoLayout
       logo="🚢"
-      title="Error!"
-      subtitle="Looks like the app sunk instead!"
-      animation="float__rotated"
-    >
-    </InfoLayout>
+      title="Not Found"
+      subtitle="The page you are looking for does not exist."
+    />
   </div>
 </template>
 
