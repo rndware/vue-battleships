@@ -13,13 +13,11 @@ describe('Molecules / GridCell.vue', () => {
     expect(wrapper.text()).toBe('X')
   })
 
-  it('applies default class when no status is provided', () => {
+  it('applies default status class "pristine" when no status is provided', () => {
     const wrapper = mount(GridCell)
     const div = wrapper.find('div.grid-cell')
     expect(div.exists()).toBe(true)
-    expect(div.classes()).toContain('grid-cell')
-    // Should not include a status class
-    expect(div.classes().some((c) => c.startsWith('grid-cell--'))).toBe(false)
+    expect(div.classes()).toContain('grid-cell--pristine')
   })
 
   it('applies correct status class when status prop is provided', () => {

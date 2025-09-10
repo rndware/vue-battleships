@@ -65,6 +65,10 @@ const getContent = (cell: GridCellData) => {
   display: flex;
 }
 
+.game-board__corner {
+  width: 30px;
+}
+
 .game-board__header-cell {
   border: 1px solid transparent;
   width: var(--cell-size);
@@ -72,6 +76,7 @@ const getContent = (cell: GridCellData) => {
   text-align: center;
   font-weight: bold;
   padding: 4px 0;
+  flex-grow: 0;
 }
 
 .game-board__row {
@@ -84,7 +89,7 @@ const getContent = (cell: GridCellData) => {
   width: 30px;
   text-align: center;
   font-weight: bold;
-  min-width: 2ch;
+  flex-shrink: 0;
 }
 
 .game-board__row-cells {

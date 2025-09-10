@@ -6,3 +6,9 @@ html, body {
   -webkit-font-smoothing: antialiased; /* Chrome, Safari */
   -moz-osx-font-smoothing: grayscale;  /* Firefox on macOS */
 }
+
+button {
+  display: inline-block;
+  min-width: max-content;
+  white-space: nowrap;
+}
