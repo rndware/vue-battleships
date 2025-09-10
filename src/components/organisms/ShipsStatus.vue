@@ -26,7 +26,7 @@ defineProps<{
   padding: 1rem;
   border-radius: var(--radius-section);
   margin-top: 1rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px var(--shadow-light);
 }
 
 .fleet-status__title {

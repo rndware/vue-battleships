@@ -76,7 +76,7 @@ const inputValue = ref('')
   padding: 30px 40px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px var(--shadow-light);
   min-height: 100vh;
   font-family: var(--font-family-sans);
 }

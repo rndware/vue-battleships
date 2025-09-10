@@ -4,7 +4,7 @@ export interface Coordinate {
 }
 
 export interface GridCellData {
-  ship: number | null
+  ship: number | null // index value of the ship in the ships array
   hit: boolean
   miss: boolean
   sunk?: boolean

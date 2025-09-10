@@ -65,10 +65,6 @@ const getContent = (cell: GridCellData) => {
   display: flex;
 }
 
-.game-board__corner {
-  width: 30px;
-}
-
 .game-board__header-cell {
   border: 1px solid transparent;
   width: var(--cell-size);
@@ -78,20 +74,8 @@ const getContent = (cell: GridCellData) => {
   padding: 4px 0;
 }
 
-.game-board__header + .game-board__row {
-  .game-board__row-cells {
-    border-top-left-radius: var(--table-corner-radius);
-    border-top-right-radius: var(--table-corner-radius);
-    overflow: hidden;
-  }
-}
-
-.game-board__row:last-child {
-  .game-board__row-cells {
-    border-bottom-left-radius: var(--table-corner-radius);
-    border-bottom-right-radius: var(--table-corner-radius);
-    overflow: hidden;
-  }
+.game-board__corner {
+  width: 30px;
 }
 
 .game-board__row {
@@ -109,6 +93,22 @@ const getContent = (cell: GridCellData) => {
 
 .game-board__row-cells {
   display: flex;
+}
+
+.game-board__header + .game-board__row {
+  .game-board__row-cells {
+    border-top-left-radius: var(--table-corner-radius);
+    border-top-right-radius: var(--table-corner-radius);
+    overflow: hidden;
+  }
+}
+
+.game-board__row:last-child {
+  .game-board__row-cells {
+    border-bottom-left-radius: var(--table-corner-radius);
+    border-bottom-right-radius: var(--table-corner-radius);
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 768px) {

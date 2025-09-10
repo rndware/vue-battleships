@@ -37,6 +37,6 @@ const startGame = () => {
 
 .intro__start-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px var(--shadow-dark);
 }
 </style>

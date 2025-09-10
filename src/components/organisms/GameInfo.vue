@@ -26,7 +26,7 @@ defineProps<{
   padding: 15px;
   background: var(--color-background);
   border-radius: var(--radius-section);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px var(--shadow-light);
 }
 
 @media (max-width: 768px) {

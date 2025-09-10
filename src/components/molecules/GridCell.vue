@@ -52,7 +52,7 @@ const handleClick = () => {
     .grid-cell--disabled
   ) {
   background: var(--blue-400);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--shadow-medium);
 
   &:before {
     content: '❌';
