@@ -1,0 +1,1 @@
+import{d as o,c as e,o as t,a as n,l as s}from"./index-Ckl2gmGC.js";const a={class:"not-found"},d=o({__name:"NotFoundView",setup(c){return(r,_)=>(t(),e("div",a,[n(s,{logo:"🚢",title:"Not Found",subtitle:"The page you are looking for does not exist."})]))}});export{d as default};
