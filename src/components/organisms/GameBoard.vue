@@ -1,32 +1,26 @@
 <template>
-  <div class="game-board">
+  <div class="game-board" :style="{ '--grid-cols': grid[0].length, '--grid-rows': grid.length }">
+    <!-- Empty corner cell -->
+    <div class="game-board__corner"></div>
+
     <!-- Column headers -->
-    <div class="game-board__header">
-      <div class="game-board__corner"></div>
-      <div
-        v-for="(col, colIndex) in grid[0].length"
-        :key="colIndex"
-        class="game-board__header-cell"
-      >
-        {{ String.fromCharCode(65 + colIndex) }}
-      </div>
+    <div v-for="(_, colIndex) in grid[0].length" :key="colIndex" class="game-board__header-cell">
+      {{ String.fromCharCode(65 + colIndex) }}
     </div>
 
-    <!-- Rows with numbers -->
-    <div class="game-board__row" v-for="(row, rowIndex) in grid" :key="rowIndex">
+    <!-- Rows with row labels and cells -->
+    <template v-for="(row, rowIndex) in grid" :key="rowIndex">
       <div class="game-board__row-label">{{ rowIndex + 1 }}</div>
-      <div class="game-board__row-cells">
-        <GridCell
-          v-for="(cell, colIndex) in row"
-          :key="colIndex"
-          :status="getStatus(cell)"
-          :disabled="disabled"
-          @click="$emit('fire', { row: rowIndex, col: colIndex })"
-        >
-          {{ getContent(cell) }}
-        </GridCell>
-      </div>
-    </div>
+      <GridCell
+        v-for="(cell, colIndex) in row"
+        :key="colIndex"
+        :status="getStatus(cell)"
+        :disabled="disabled"
+        @click="$emit('fire', { row: rowIndex, col: colIndex })"
+      >
+        {{ getContent(cell) }}
+      </GridCell>
+    </template>
   </div>
 </template>
 
@@ -57,67 +51,47 @@ const getContent = (cell: GridCellData) => {
 
 <style scoped>
 .game-board {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: var(--cell-header-size) repeat(var(--grid-cols), var(--cell-size));
+  grid-template-rows: var(--cell-header-size) repeat(var(--grid-rows), var(--cell-size));
   overflow: hidden;
 }
 
-.game-board__header {
-  display: flex;
-}
-
 .game-board__corner {
-  width: 30px;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .game-board__header-cell {
+  grid-row: 1;
   border: 1px solid transparent;
-  width: var(--cell-size);
   color: var(--blue-dark);
   text-align: center;
   font-weight: bold;
   padding: 4px 0;
-  flex-grow: 0;
-}
-
-.game-board__row {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .game-board__row-label {
+  grid-column: 1;
   color: var(--blue-dark);
-  width: 30px;
   text-align: center;
   font-weight: bold;
-  flex-shrink: 0;
-}
-
-.game-board__row-cells {
   display: flex;
-}
-
-.game-board__header + .game-board__row {
-  .game-board__row-cells .grid-cell:first-of-type {
-    border-top-left-radius: var(--table-corner-radius);
-  }
-  .game-board__row-cells .grid-cell:last-of-type {
-    border-top-right-radius: var(--table-corner-radius);
-  }
-}
-
-.game-board__row:last-child {
-  .game-board__row-cells .grid-cell:first-of-type {
-    border-bottom-left-radius: var(--table-corner-radius);
-  }
-  .game-board__row-cells .grid-cell:last-of-type {
-    border-bottom-right-radius: var(--table-corner-radius);
-  }
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
+  .game-board {
+    grid-template-columns: var(--cell-header-size) repeat(var(--grid-cols), var(--cell-size-sm));
+    grid-template-rows: var(--cell-header-size) repeat(var(--grid-rows), var(--cell-size-sm));
+  }
+
   .game-board__header-cell {
-    width: 35px;
-    font-size: 16px;
+    font-size: var(--cell-header-font-size);
   }
 }
 </style>

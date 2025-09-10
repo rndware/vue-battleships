@@ -32,8 +32,6 @@ const handleClick = () => {
 <style scoped>
 .grid-cell {
   --base-font-size: var(--cell-font-size);
-  width: var(--cell-size);
-  height: var(--cell-size);
   border: 1px solid var(--light-blue-400);
   background: var(--blue-faded);
   color: var(--white);
@@ -50,7 +48,6 @@ const handleClick = () => {
 
 .grid-cell--pristine:hover:not(.grid-cell--disabled) {
   background: var(--blue-400);
-  box-shadow: 0 4px 8px var(--shadow-medium);
 
   &:before {
     content: '❌';
@@ -120,8 +117,6 @@ const handleClick = () => {
 @media (max-width: 768px) {
   .grid-cell {
     --base-font-size: var(--cell-font-size-sm);
-    width: var(--cell-size-sm);
-    height: var(--cell-size-sm);
   }
 }
 </style>
