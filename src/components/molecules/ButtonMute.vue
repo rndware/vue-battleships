@@ -5,23 +5,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useSounds } from '@/composables/useSounds';
+import { ref } from 'vue'
+import { useSounds } from '@/composables/useSounds'
 
 defineEmits<{
   (e: 'click'): void
 }>()
 
-const toggle = ref(false);
+const toggle = ref(false)
 
 const toggleMute = () => {
-  toggle.value = !toggle.value;
+  toggle.value = !toggle.value
 
-  useSounds().toggleMute();
+  useSounds().toggleMute()
 }
 
 const getContent = () => {
-  return  toggle.value ? '🔇 Unmute' : '🔊 Mute'
+  return toggle.value ? '🔇 Unmute' : '🔊 Mute'
 }
 </script>
 

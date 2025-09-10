@@ -12,7 +12,7 @@
 import { computed } from 'vue'
 import InputCoordinate from '@/components/atoms/InputCoordinate.vue'
 import ButtonFire from '@/components/atoms/ButtonFire.vue'
-import ButtonMute from '@/components/atoms/ButtonMute.vue';
+import ButtonMute from '@/components/molecules/ButtonMute.vue';
 
 const props = defineProps<{
   modelValue: string
@@ -50,12 +50,5 @@ const onSubmit = () => {
   background: var(--color-background);
   padding: 0.75rem 1.5rem;
   border-radius: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .input-group {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 </style>

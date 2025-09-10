@@ -74,10 +74,6 @@ const getContent = (cell: GridCellData) => {
   padding: 4px 0;
 }
 
-.game-board__corner {
-  width: 30px;
-}
-
 .game-board__row {
   display: flex;
   align-items: center;
@@ -96,18 +92,20 @@ const getContent = (cell: GridCellData) => {
 }
 
 .game-board__header + .game-board__row {
-  .game-board__row-cells {
+  .game-board__row-cells .grid-cell:first-of-type {
     border-top-left-radius: var(--table-corner-radius);
+  }
+  .game-board__row-cells .grid-cell:last-of-type {
     border-top-right-radius: var(--table-corner-radius);
-    overflow: hidden;
   }
 }
 
 .game-board__row:last-child {
-  .game-board__row-cells {
+  .game-board__row-cells .grid-cell:first-of-type {
     border-bottom-left-radius: var(--table-corner-radius);
+  }
+  .game-board__row-cells .grid-cell:last-of-type {
     border-bottom-right-radius: var(--table-corner-radius);
-    overflow: hidden;
   }
 }
 

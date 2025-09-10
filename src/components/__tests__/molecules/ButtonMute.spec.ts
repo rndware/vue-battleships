@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import ButtonMute from '../../../components/atoms/ButtonMute.vue'
+import ButtonMute from '../../../components/molecules/ButtonMute.vue'
 
 // Mock the useSounds composable
 const toggleMuteMock = vi.fn();

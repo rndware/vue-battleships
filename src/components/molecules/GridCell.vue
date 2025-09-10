@@ -19,7 +19,7 @@ const emit = defineEmits<{
 }>()
 
 const statusClass = computed(() => {
-  return props.status ? `grid-cell--${props.status}` : ''
+  return props.status ? `grid-cell--${props.status || 'pristine'}` : ''
 })
 
 const handleClick = () => {
@@ -48,9 +48,7 @@ const handleClick = () => {
   overflow: hidden;
 }
 
-.grid-cell:hover:not(.grid-cell--hit):not(.grid-cell--miss):not(.grid-cell--sunk):not(
-    .grid-cell--disabled
-  ) {
+.grid-cell.grid-cell--pristine:hover:not(.grid-cell--disabled) {
   background: var(--blue-400);
   box-shadow: 0 4px 8px var(--shadow-medium);
 
