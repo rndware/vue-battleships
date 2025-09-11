@@ -1,9 +1,11 @@
 <template>
   <div class="input-section">
     <div class="input-group">
-      <InputCoordinate v-model="value" :placeholder="placeholder" @submit="onSubmit" />
-      <ButtonFire :disabled="disabled" @click="onSubmit" />
-      <ButtonMute />
+      <slot>
+        <InputCoordinate v-model="value" :placeholder="placeholder" @submit="onSubmit" />
+        <ButtonFire :disabled="disabled" @click="onSubmit" />
+        <ButtonMute />
+      </slot>
     </div>
   </div>
 </template>

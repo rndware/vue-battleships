@@ -18,7 +18,9 @@
         :disabled="disabled"
         @click="$emit('fire', { row: rowIndex, col: colIndex })"
       >
-        {{ getContent(cell) }}
+        <slot name="cellContent" :cell="cell">
+          {{ getContent(cell) }}
+        </slot>
       </GridCell>
     </template>
   </div>

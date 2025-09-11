@@ -1,9 +1,11 @@
 <template>
   <section class="game-info">
-    <InfoItem label="Shots Fired" :value="shotsFired" />
-    <InfoItem label="Hits" :value="hits" />
-    <InfoItem label="Shots Remaining" :value="shotsRemaining" :warning="shotsRemaining <= 3" />
-    <InfoItem label="Ships Remaining" :value="shipsRemaining" />
+    <slot>
+      <InfoItem label="Shots Fired" :value="shotsFired" />
+      <InfoItem label="Hits" :value="hits" />
+      <InfoItem label="Shots Remaining" :value="shotsRemaining" :warning="shotsRemaining <= 3" />
+      <InfoItem label="Ships Remaining" :value="shipsRemaining" />
+    </slot>
   </section>
 </template>
 
@@ -27,12 +29,5 @@ defineProps<{
   background: var(--color-background);
   border-radius: var(--radius-section);
   box-shadow: inset 0 2px 4px var(--shadow-light);
-}
-
-@media (max-width: 768px) {
-  .game__info {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 </style>

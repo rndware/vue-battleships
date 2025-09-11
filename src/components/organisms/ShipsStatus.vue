@@ -1,7 +1,7 @@
 <template>
   <section class="fleet-status">
     <h3 class="fleet-status__title">
-      Fleet Status
+      {{ title || 'Fleet Status' }}
       <span class="led"></span>
     </h3>
     <div class="fleet-status__ship" v-for="ship in ships" :key="ship.name">
@@ -16,6 +16,7 @@ import ShipHealth from '@/components/molecules/ShipHealth.vue'
 import type { Ship } from '@/types'
 
 defineProps<{
+  title?: string
   ships: Ship[]
 }>()
 </script>

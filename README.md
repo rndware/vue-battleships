@@ -6,22 +6,26 @@ A simple and fun Battleships game
 
 <img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot.png" width="65%" />
 
-- Clean, maintainable CSS using **BEM** and custom properties
-- **Semantic design tokens** for a scalable design system
-- Built with configurability in mind
-- Comprehensive Vitest coverage for components, composables, and helpers
-- Organized with the [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/) for scalable architecture
-- Includes immersive sound effects
-- Written in **TypeScript** for full type safety
+## Highlights
 
-TO-DO:
+- Built with **Vue 3**, **Composition API** and **TypeScript**
+- Architected scalable component library using **Atomic Design Principles** and **Single File Components (SFCs)**
+- Engineered for high configurability
+- Achieved comprehensive test coverage using **Vitest**
+- Eliminated unnecessary third-party dependencies, reducing bundle size and minimising security vulnerabilities
+- Seperated grid logic from `useBattleshipsGame` to be more **SOLID**
+- Optimized Vue components for brevity and clarity using slots where possible
+- Includes immersive sound effects
+
+## TO-DO
 
 - Add `rgba` colors to CSS custom properties
 - Rationalize unit usage (`rem` vs `px`) across the app
 - Remove `any` types in unit tests
 
-Consider:
-- Converting the `div`-based grid to a `table` for accessibility  
+## Consider
+
+- Converting the `div`-based grid to a `table` for accessibility
 
 ## Project Setup
 
