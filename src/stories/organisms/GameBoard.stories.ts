@@ -32,7 +32,7 @@ const meta: Meta<typeof GameBoard> = {
   argTypes: {
     grid: { control: 'object', description: '2D array representing the game board cells' },
     disabled: { control: 'boolean', description: 'Whether the board is disabled' },
-    fire: { action: 'fire', description: 'Emitted when a cell is clicked' },
+    onFire: { action: 'fire', description: 'Emitted when a cell is clicked' },
   },
 }
 
@@ -74,6 +74,40 @@ export const SomeHitsAndMisses: Story = {
     ],
     disabled: false,
   },
+}
+
+export const WithCustomCellContent: Story = {
+  args: {
+    grid: [
+      [
+        { hit: true, miss: false, sunk: false },
+        { hit: false, miss: false, sunk: false },
+        { hit: false, miss: true, sunk: false },
+        { hit: false, miss: false, sunk: false },
+        { hit: false, miss: false, sunk: false },
+      ],
+      Array(5).fill({ hit: false, miss: false, sunk: false }),
+      Array(5).fill({ hit: false, miss: false, sunk: true }),
+      Array(5).fill({ hit: false, miss: false, sunk: false }),
+      Array(5).fill({ hit: false, miss: false, sunk: false }),
+    ],
+  },
+  render: (args) => ({
+    components: { GameBoard },
+    setup() {
+      return { args }
+    },
+    template: `
+      <GameBoard v-bind="args" @fire="args.fire">
+        <template #cellContent="{ cell }">
+          <span v-if="cell.ship">-</span>
+          <span v-else-if="cell.hit">+</span>
+          <span v-else-if="cell.miss">0</span>
+          <span v-else-if="cell.sunk">x</span>
+        </template>
+      </GameBoard>
+    `,
+  }),
 }
 
 export const DisabledBoard: Story = {

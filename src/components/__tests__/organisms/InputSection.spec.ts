@@ -14,6 +14,20 @@ describe('Organisms / InputSection.vue', () => {
     expect(wrapper.findComponent(ButtonFire).exists()).toBe(true)
   })
 
+  it('allows overriding slot content', () => {
+    const wrapper = mount(InputSection, {
+      props: { modelValue: '' },
+      slots: {
+        default: '<div class="custom-slot">Custom</div>',
+      },
+    })
+
+    expect(wrapper.find('.custom-slot').exists()).toBe(true)
+    // Default components should not exist if slot is overridden
+    expect(wrapper.findComponent(InputCoordinate).exists()).toBe(false)
+    expect(wrapper.findComponent(ButtonFire).exists()).toBe(false)
+  })
+
   it('binds modelValue to InputCoordinate', async () => {
     const wrapper = mount(InputSection, {
       props: { modelValue: 'A1' },

@@ -57,6 +57,21 @@ describe('Organisms / GameBoard.vue', () => {
     expect(cells[3].text()).toBe(cellEmoji.sunk)
   })
 
+  it('renders custom slot content', () => {
+    const wrapper = mount(GameBoard, {
+      props: { grid },
+      slots: {
+        cellContent: '<template #cellContent="{ cell }">[{{ cell.hit ? "X" : "-" }}]</template>',
+      },
+    })
+
+    const cells = wrapper.findAllComponents(GridCell)
+    expect(cells[0].text()).toBe('[-]')
+    expect(cells[1].text()).toBe('[X]')
+    expect(cells[2].text()).toBe('[-]')
+    expect(cells[3].text()).toBe('[-]')
+  })
+
   it('emits fire event when a cell is clicked', async () => {
     const cells = wrapper.findAllComponents(GridCell)
     await cells[0].trigger('click')

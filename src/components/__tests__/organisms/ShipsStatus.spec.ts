@@ -26,6 +26,19 @@ describe('Organisms / ShipsStatus', () => {
     })
   })
 
+  it('renders default title when none is provided', () => {
+    const wrapper = mount(ShipsStatus, { props: { ships } })
+    const title = wrapper.find('.fleet-status__title')
+    expect(title.text()).toContain('Fleet Status')
+  })
+
+  it('renders custom title when provided', () => {
+    const customTitle = 'My Fleet'
+    const wrapper = mount(ShipsStatus, { props: { ships, title: customTitle } })
+    const title = wrapper.find('.fleet-status__title')
+    expect(title.text()).toContain(customTitle)
+  })
+
   it('passes correct props to ShipHealth for each ship', () => {
     const wrapper = mount(ShipsStatus, { props: { ships } })
     const healthComponents = wrapper.findAllComponents(ShipHealth)

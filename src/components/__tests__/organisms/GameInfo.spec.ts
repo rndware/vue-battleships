@@ -17,6 +17,12 @@ describe('Organisms / GameInfo.vue', () => {
     expect(items.length).toBe(4)
   })
 
+  it('renders default slot with four InfoItem components', () => {
+    const wrapper = mount(GameInfo, { props })
+    const items = wrapper.findAllComponents(InfoItem)
+    expect(items.length).toBe(4)
+  })
+
   it('passes correct label and value to each InfoItem', () => {
     const wrapper = mount(GameInfo, { props })
     const items = wrapper.findAllComponents(InfoItem)

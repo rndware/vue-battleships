@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import GameInfo from '@/components/organisms/GameInfo.vue'
+import InfoItem from '@/components/molecules/InfoItem.vue'
 
 const meta: Meta<typeof GameInfo> = {
   title: 'Components/Organisms/GameInfo',
@@ -24,8 +25,7 @@ const meta: Meta<typeof GameInfo> = {
     },
     shotsRemaining: {
       control: { type: 'number' },
-      description:
-        'Number of shots left. Shows a warning state if 3 or fewer remain.',
+      description: 'Number of shots left. Shows a warning state if 3 or fewer remain.',
     },
     shipsRemaining: {
       control: { type: 'number' },
@@ -61,5 +61,36 @@ export const NoShipsRemaining: Story = {
     hits: 10,
     shotsRemaining: 5,
     shipsRemaining: 0,
+  },
+}
+
+export const UpdatedSlots: Story = {
+  args: {
+    shotsFired: 25,
+    hits: 10,
+    shotsRemaining: 5,
+    shipsRemaining: 0,
+  },
+  render: (args) => ({
+    components: { GameInfo, InfoItem },
+    setup() {
+      return { args }
+    },
+    template: `
+      <GameInfo v-bind="args">
+        <InfoItem label="Shots Fired" :value="args.shotsFired" />
+        <InfoItem label="Hits" :value="args.hits" />
+        <InfoItem label="Shots Remaining" :value="args.shotsRemaining" :warning="args.shotsRemaining <= 3" />
+        <InfoItem label="Ships Remaining" :value="args.shipsRemaining" />
+        <InfoItem label="Time Left" value="12:00" />
+      </GameInfo>
+    `,
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story: 'A disabled cell that cannot be clicked. Hover effects are disabled.',
+      },
+    },
   },
 }
