@@ -1,6 +1,7 @@
 @import 'index.css';
 
 html, body {
+  font-family: var(--font-family-sans);
   background-color: var(--white-200);
   margin: 0;
   -webkit-font-smoothing: antialiased; /* Chrome, Safari */

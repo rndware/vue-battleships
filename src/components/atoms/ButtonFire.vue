@@ -1,10 +1,14 @@
 <template>
-  <button class="btn-fire" type="button" @click="$emit('click')">
+  <button class="btn-fire" type="button" @click="$emit('click')" :disabled="disabled">
     <slot> 🚀 Fire!</slot>
   </button>
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  disabled?: boolean
+}>()
+
 defineEmits<{
   (e: 'click'): void
 }>()
