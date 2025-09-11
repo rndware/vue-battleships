@@ -23,4 +23,5 @@
   --color-text: var(--black-900);
   --color-text-muted: var(--gray-600);
   --color-text-disabled: var(--gray-disabled);
+  --color-text-warning: var(--red-500);
 }

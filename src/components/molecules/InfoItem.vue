@@ -1,7 +1,9 @@
 <template>
   <div class="info-item">
     <InfoLabel>{{ label }}</InfoLabel>
-    <InfoValue :class="{ warning: warning }">{{ value }}</InfoValue>
+    <InfoValue :class="['info-item__value', { 'info-item__value--warning': warning }]">
+      {{ value }}
+    </InfoValue>
   </div>
 </template>
 
@@ -20,8 +22,8 @@ defineProps<{
 .info-item {
   text-align: center;
 
-  .warning {
-    color: var(--red-500);
+  .info-item__value--warning {
+    color: var(--color-text-warning);
   }
 }
 </style>
