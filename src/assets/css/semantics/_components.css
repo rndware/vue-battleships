@@ -1,15 +1,18 @@
 :root {
   --btn-radius: var(--radius-btn);
 
-  --led-background: var(--red-500);
+  --led-size: var(--size-led);
+  --led-color-background: var(--red-500);
   --led-box-shadow: var(rgba(255, 0, 0, 0.8));
-  --led-dark-blink: rgba(255, 0, 0, 0.2);
-  --led-light-blink: rgba(255, 0, 0, 1);
+  --led-color-dark-blink: rgba(255, 0, 0, 0.2);
+  --led-color-light-blink: rgba(255, 0, 0, 1);
 
   --section-radius: var(--radius-section);
 
-  --cell-header-size: var(--size-cell-300);
-  --cell-header-font-size: var(--font-size-300);
+  --grid-header-color: var(--blue-700);
+  --grid-header-size: var(--size-cell-300);
+  --grid-header-font-size: var(--font-size-300);
+
   --cell-size: var(--size-cell-400);
   --cell-color-background: var(--blue-300);
   --cell-color: var(--white);
@@ -18,4 +21,17 @@
   --cell-size-sm: var(--size-cell-350);
   --cell-font-size: var(--font-size-400);
   --cell-font-size-sm: var(--font-size-300);
+
+  --health-dot-size: var(--size-dot);
+  --health-dot-empty: var(--gray-300);
+  --health-dot-alive: var(--green-400);
+
+  --ship-status-color: var(--blue-600);
+  --ship-status-title-color: var(--gray-600);
+  --ship-status-divider: var(--gray-100);
+
+  --layout-title-color: var(--blue-700);
+  --layout-logo-font-size: var(--font-size-400);
+  --layout-subtitle-color: var(--gray-600);
+  --layout-color-background: rgba(255, 255, 255, 0.95);
 }

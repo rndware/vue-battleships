@@ -1,5 +1,5 @@
 <template>
-  <span class="health-dot" :class="{ filled }" />
+  <span class="health-dot" :class="{ 'health-dot--filled': filled }" />
 </template>
 
 <script setup lang="ts">
@@ -11,15 +11,15 @@ defineProps<{
 <style scoped>
 .health-dot {
   display: inline-block;
-  width: var(--size-dot);
-  height: var(--size-dot);
+  width: var(--health-dot-size);
+  height: var(--health-dot-size);
   margin: 0 2px;
   border-radius: 50%;
-  background-color: var(--gray-300); /* empty */
+  background-color: var(--health-dot-empty);
   transition: background-color var(--duration-fast);
 }
 
-.health-dot.filled {
-  background-color: var(--green-400); /* alive */
+.health-dot--filled {
+  background-color: var(--health-dot-alive);
 }
 </style>

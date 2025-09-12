@@ -54,8 +54,8 @@ const getContent = (cell: GridCellData) => {
 <style scoped>
 .game-board {
   display: grid;
-  grid-template-columns: var(--cell-header-size) repeat(var(--grid-cols), var(--cell-size));
-  grid-template-rows: var(--cell-header-size) repeat(var(--grid-rows), var(--cell-size));
+  grid-template-columns: var(--grid-header-size) repeat(var(--grid-cols), var(--cell-size));
+  grid-template-rows: var(--grid-header-size) repeat(var(--grid-rows), var(--cell-size));
   overflow: hidden;
 }
 
@@ -67,7 +67,7 @@ const getContent = (cell: GridCellData) => {
 .game-board__header-cell {
   grid-row: 1;
   border: 1px solid transparent;
-  color: var(--blue-dark);
+  color: var(--grid-header-color);
   text-align: center;
   font-weight: bold;
   padding: 4px 0;
@@ -78,7 +78,7 @@ const getContent = (cell: GridCellData) => {
 
 .game-board__row-label {
   grid-column: 1;
-  color: var(--blue-dark);
+  color: var(--grid-header-color);
   text-align: center;
   font-weight: bold;
   display: flex;
@@ -88,12 +88,12 @@ const getContent = (cell: GridCellData) => {
 
 @media (max-width: 768px) {
   .game-board {
-    grid-template-columns: var(--cell-header-size) repeat(var(--grid-cols), var(--cell-size-sm));
-    grid-template-rows: var(--cell-header-size) repeat(var(--grid-rows), var(--cell-size-sm));
+    grid-template-columns: var(--grid-header-size) repeat(var(--grid-cols), var(--cell-size-sm));
+    grid-template-rows: var(--grid-header-size) repeat(var(--grid-rows), var(--cell-size-sm));
   }
 
   .game-board__header-cell {
-    font-size: var(--cell-header-font-size);
+    font-size: var(--grid-header-font-size);
   }
 }
 </style>

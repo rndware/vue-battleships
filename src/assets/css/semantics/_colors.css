@@ -9,6 +9,10 @@
   --color-secondary-active: var(--blue-700);
   --color-on-secondary: var(--white);
 
+  --color-tertiary: var(--blue-600);
+  --color-tertiary-hover: var(--blue-800);
+  --color-tertiary-active: var(--blue-900);
+
   --color-hit: var(--orange-500);
   --color-hit-light: var(--orange-400);
 
@@ -25,7 +29,7 @@
   --color-lose: var(--black-900);
   --color-lose-light: var(--black-800);
 
-  --color-background: var(--white-100);
+  --color-section-background: var(--white-100);
   --color-surface: var(--white);
   --color-surface-alt: var(--white-200);
 
@@ -34,6 +38,7 @@
 
   --color-text: var(--black-900);
   --color-text-muted: var(--gray-600);
+  --color-text-value: var(--blue-700);
   --color-text-disabled: var(--gray-disabled);
   --color-text-warning: var(--red-500);
 }

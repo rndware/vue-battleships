@@ -9,7 +9,7 @@ describe('Atoms / HealthDot.vue', () => {
     })
     const dot = wrapper.find('span.health-dot')
     expect(dot.exists()).toBe(true)
-    expect(dot.classes()).not.toContain('filled')
+    expect(dot.classes()).not.toContain('health-dot--filled')
   })
 
   it('renders as a filled dot when filled=true', () => {
@@ -17,7 +17,7 @@ describe('Atoms / HealthDot.vue', () => {
       props: { filled: true },
     })
     const dot = wrapper.find('span.health-dot')
-    expect(dot.classes()).toContain('filled')
+    expect(dot.classes()).toContain('health-dot--filled')
   })
 
   it('updates class when prop changes', async () => {
@@ -25,9 +25,9 @@ describe('Atoms / HealthDot.vue', () => {
       props: { filled: false },
     })
     const dot = wrapper.find('span.health-dot')
-    expect(dot.classes()).not.toContain('filled')
+    expect(dot.classes()).not.toContain('health-dot--filled')
 
     await wrapper.setProps({ filled: true })
-    expect(dot.classes()).toContain('filled')
+    expect(dot.classes()).toContain('health-dot--filled')
   })
 })

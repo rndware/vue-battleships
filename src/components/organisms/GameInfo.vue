@@ -26,7 +26,7 @@ defineProps<{
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 15px;
-  background: var(--color-background);
+  background: var(--color-section-background);
   border-radius: var(--radius-section);
   box-shadow: inset 0 2px 4px var(--shadow-light);
 }

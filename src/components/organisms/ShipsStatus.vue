@@ -23,7 +23,7 @@ defineProps<{
 
 <style scoped>
 .fleet-status {
-  background: var(--color-background);
+  background: var(--color-section-background);
   padding: 1rem;
   border-radius: var(--radius-section);
   margin-top: 1rem;
@@ -33,7 +33,7 @@ defineProps<{
 .fleet-status__title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--gray-600);
+  color: var(--ship-status-title-color);
   margin-bottom: 0.75rem;
   margin: 0 0 0.75rem 0;
   text-align: center;
@@ -53,7 +53,7 @@ defineProps<{
 
 .fleet-status__ship-name {
   font-weight: bold;
-  color: var(--blue-mid);
+  color: var(--ship-status-color);
 }
 
 .fleet-status__ship-health {
@@ -61,10 +61,10 @@ defineProps<{
 }
 
 .led {
-  width: var(--size-led);
-  height: var(--size-led);
+  width: var(--led-size);
+  height: var(--led-size);
   display: inline-block;
-  background: var(--led-background);
+  background: var(--led-color-background);
   border-radius: 50%;
   margin: 0 0.1rem;
   box-shadow: 0 0 8px var(--led-box-shadow);
@@ -75,11 +75,11 @@ defineProps<{
   0%,
   100% {
     opacity: 0.2;
-    box-shadow: 0 0 4px var(--led-dark-blink);
+    box-shadow: 0 0 4px var(--led-color-dark-blink);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 12px var(--led-light-blink);
+    box-shadow: 0 0 12px var(--led-color-light-blink);
   }
 }
 </style>

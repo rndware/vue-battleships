@@ -46,12 +46,12 @@ defineProps<{
 
 .info__title {
   font-size: 4rem;
-  color: var(--blue-dark);
+  color: var(--layout-title-color);
   margin-bottom: 1rem;
 }
 
 .info__subtitle {
-  color: var(--color-text-muted);
+  color: var(--layout-subtitle-color);
   font-size: 1.5rem;
   margin-bottom: 4rem;
 }

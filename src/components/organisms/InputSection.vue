@@ -49,7 +49,7 @@ const onSubmit = () => {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background: var(--color-background);
+  background: var(--color-section-background);
   padding: 0.75rem 1.5rem;
   border-radius: 1.5rem;
 }

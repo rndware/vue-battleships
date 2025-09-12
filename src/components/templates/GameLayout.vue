@@ -74,7 +74,7 @@ const inputValue = ref('')
   max-width: 550px;
   margin: 10px auto;
   padding: 30px 40px;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--layout-color-background);
   border-radius: 15px;
   box-shadow: 0 20px 40px var(--shadow-light);
   min-height: 100vh;
@@ -84,7 +84,7 @@ const inputValue = ref('')
 .game-layout__title {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--blue-dark);
+  color: var(--layout-title-color);
   margin-bottom: 30px;
 }
 

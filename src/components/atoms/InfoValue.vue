@@ -8,6 +8,6 @@
 .info-value {
   font-weight: bold;
   font-size: 1.2rem;
-  color: var(--blue-dark);
+  color: var(--color-text-value);
 }
 </style>
