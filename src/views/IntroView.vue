@@ -25,7 +25,7 @@ const startGame = () => {
 .intro__start-button {
   padding: 1rem 2rem;
   font-size: 1.25rem;
-  background: var(--red-action);
+  background: var(--color-primary);
   border: none;
   border-radius: var(--radius-btn);
   color: var(--white);
@@ -38,5 +38,10 @@ const startGame = () => {
 .intro__start-button:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 20px var(--shadow-dark);
+  background-color: var(--color-primary-hover);
+}
+
+.intro__start-button:active {
+  background-color: var(--color-primary-active);
 }
 </style>

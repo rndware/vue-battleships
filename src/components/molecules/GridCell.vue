@@ -32,9 +32,9 @@ const handleClick = () => {
 <style scoped>
 .grid-cell {
   --base-font-size: var(--cell-font-size);
-  border: 1px solid var(--light-blue-400);
-  background: var(--blue-faded);
-  color: var(--white);
+  border: 1px solid var(--cell-color-border);
+  background: var(--cell-color-background);
+  color: var(--cell-color);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -47,14 +47,14 @@ const handleClick = () => {
 }
 
 .grid-cell--pristine:hover:not(.grid-cell--disabled) {
-  background: var(--blue-400);
+  background: var(--cell-color-background-hover);
 
   &:before {
     content: '❌';
     position: absolute;
     inset: 0;
     font-size: var(--base-font-size);
-    background: var(--blue-400);
+    background: var(--cell-color-background-hover);
 
     display: flex;
     justify-content: center;
@@ -67,16 +67,16 @@ const handleClick = () => {
 }
 
 .grid-cell--hit {
-  background: var(--orange-500);
+  background: var(--color-hit);
   animation: hitPulse var(--duration-slow) ease-out;
 }
 
 .grid-cell--miss {
-  background: var(--blue-400);
+  background: var(--color-miss);
 }
 
 .grid-cell--sunk {
-  background: var(--light-blue-400);
+  background: var(--color-sunk-dark);
   animation: sunkPulse var(--duration-slower) ease-out;
 }
 
@@ -86,7 +86,7 @@ const handleClick = () => {
   }
   50% {
     font-size: calc(var(--base-font-size) * 1.5);
-    background: var(--orange-400);
+    background: var(--color-hit-light);
   }
   100% {
     font-size: var(--base-font-size);
@@ -100,11 +100,11 @@ const handleClick = () => {
   }
   25% {
     font-size: calc(var(--base-font-size) * 1.2);
-    background: var(--purple-400);
+    background: var(--color-sunk-light);
   }
   50% {
     font-size: calc(var(--base-font-size) * 1.5);
-    background: var(--purple-500);
+    background: var(--color-sunk);
   }
   75% {
     font-size: calc(var(--base-font-size) * 1.2);

@@ -1,9 +1,5 @@
 :root {
   --btn-radius: var(--radius-btn);
-  --btn-bg: var(--color-primary);
-  --btn-bg-hover: var(--color-primary-hover);
-  --btn-bg-active: var(--color-primary-active);
-  --btn-text: var(--white);
 
   --led-background: var(--red-500);
   --led-box-shadow: var(rgba(255, 0, 0, 0.8));
@@ -15,6 +11,10 @@
   --cell-header-size: var(--size-cell-300);
   --cell-header-font-size: var(--font-size-300);
   --cell-size: var(--size-cell-400);
+  --cell-color-background: var(--blue-300);
+  --cell-color: var(--white);
+  --cell-color-background-hover: var(--blue-400);
+  --cell-color-border: var(--light-blue-400);
   --cell-size-sm: var(--size-cell-350);
   --cell-font-size: var(--font-size-400);
   --cell-font-size-sm: var(--font-size-300);

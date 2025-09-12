@@ -16,8 +16,8 @@ defineEmits<{
 
 <style scoped>
 .btn-fire {
-  background-color: var(--color-danger);
-  color: var(--color-surface);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
   font-weight: bold;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -27,11 +27,11 @@ defineEmits<{
 }
 
 .btn-fire:hover {
-  background-color: var(--color-danger-hover);
+  background-color: var(--color-primary-hover);
 }
 
 .btn-fire:active {
-  background-color: var(--color-danger-active);
+  background-color: var(--color-primary-active);
 }
 
 .btn-fire:disabled {

@@ -12,8 +12,8 @@ defineEmits<{
 
 <style scoped>
 .btn-new {
-  background-color: var(--btn-bg);
-  color: var(--white);
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
   font-weight: bold;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -23,10 +23,10 @@ defineEmits<{
 }
 
 .btn-new:hover {
-  background-color: var(--btn-bg-hover);
+  background-color: var(--color-secondary-hover);
 }
 
 .btn-new:active {
-  background-color: var(--btn-bg-active);
+  background-color: var(--color-secondary-active);
 }
 </style>

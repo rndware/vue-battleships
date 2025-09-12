@@ -28,25 +28,25 @@ defineProps<{
 }
 
 .game-message--hit {
-  background: linear-gradient(45deg, var(--orange-500), var(--orange-400));
+  background: linear-gradient(45deg, var(--color-hit), var(--color-hit-light));
 }
 
 .game-message--miss {
-  background: linear-gradient(45deg, var(--blue-500), var(--blue-400));
+  background: linear-gradient(45deg, var(--color-miss), var(--color-miss-light));
 }
 
 .game-message--sunk {
-  background: linear-gradient(45deg, var(--purple-500), var(--purple-400));
+  background: linear-gradient(45deg, var(--color-sunk), var(--color-sunk-light));
 }
 
 .game-message--win {
-  background: linear-gradient(45deg, var(--green-500), var(--green-400));
+  background: linear-gradient(45deg, var(--color-win), var(--color-win-light));
   font-size: 1.5rem;
   animation: winPulse 1s ease-out infinite;
 }
 
 .game-message--lose {
-  background: linear-gradient(45deg, var(--black-900), var(--black-800));
+  background: linear-gradient(45deg, var(--color-lose), var(--color-lose-light));
   font-size: 1.5rem;
   animation: winPulse 1s ease-out infinite;
 }
