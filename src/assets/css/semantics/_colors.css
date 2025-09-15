@@ -4,7 +4,6 @@
   --color-primary-hover: var(--red-700);
   --color-primary-active: var(--red-800);
   --color-on-primary: var(--white);
-
   --color-primary-alpha-80: var(--red-500-alpha-80);
 
   /* Secondary */
@@ -17,18 +16,17 @@
   --color-tertiary: var(--blue-600);
   --color-tertiary-hover: var(--blue-800);
   --color-tertiary-active: var(--blue-900);
-
   --color-tertiary-alpha-80: var(--blue-600-alpha-80);
 
   /* Statuses */
-  --color-hit: var(--orange-500);
-  --color-hit-light: var(--orange-400);
+  --color-hit: var(--orange-500-alpha-80);
+  --color-hit-light: var(--orange-400-alpha-80);
 
-  --color-miss: var(--light-blue-500);
-  --color-miss-light: var(--light-blue-400);
+  --color-miss: var(--light-blue-500-alpha-80);
+  --color-miss-light: var(--light-blue-400-alpha-80);
 
-  --color-sunk: var(--purple-500);
-  --color-sunk-light: var(--purple-400);
+  --color-sunk: var(--purple-500-alpha-80);
+  --color-sunk-light: var(--purple-400-alpha-80);
   --color-sunk-dark: var(--light-blue-400);
 
   --color-win: var(--green-500);

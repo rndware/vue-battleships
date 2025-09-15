@@ -1,14 +1,13 @@
 :root {
   /* Reds */
   --red-500: #e63946;
-  --red-600: #ff0000;
+  --red-600: #f00;
   --red-700: #d62828;
   --red-800: #ba181b;
-
-  --red-500-alpha-80: rgba(230, 57, 70, 0.8);
-  --red-600-alpha-80: rgba(255, 0, 0, 0.8);
-  --red-600-alpha-20: rgba(255, 0, 0, 0.2);
-  --red-600-alpha-10: rgba(255, 0, 0, 1);
+  --red-500-alpha-80: rgb(230 57 70 / 80%);
+  --red-600-alpha-80: rgb(255 0 0 / 80%);
+  --red-600-alpha-20: rgb(255 0 0 / 20%);
+  --red-600-alpha-10: rgb(255 0 0 / 100%);
 
   /* Blues */
   --blue-100: #d0e6f3;
@@ -20,16 +19,19 @@
   --blue-700: #2c3e50;
   --blue-800: #1d3557;
   --blue-900: #0d1b2a;
-
-  --blue-600-alpha-80: rgba(52, 73, 94, 0.8);
+  --blue-600-alpha-80: rgb(52 73 94 / 80%);
 
   /* Oranges */
   --orange-400: #ff6b6b;
   --orange-500: #e74c3c;
+  --orange-400-alpha-80: rgb(255 107 107 / 80%);
+  --orange-500-alpha-80: rgb(231 76 60 / 80%);
 
   /* Light Blues / Grays */
   --light-blue-400: #bdc3c7;
   --light-blue-500: #95a5a6;
+  --light-blue-400-alpha-80: rgb(189 195 199 / 80%);
+  --light-blue-500-alpha-80: rgb(149 165 166 / 80%);
 
   /* Purples */
   --purple-400: #9b59b6;
@@ -40,21 +42,20 @@
   --green-500: #27ae60;
 
   /* Blacks / Dark tones */
-  --black-800: #222222;
-  --black-900: #000000;
+  --black-800: #222;
+  --black-900: #000;
 
   /* Grays */
   --gray-100: #ecf0f1;
-  --gray-300: #cccccc;
+  --gray-300: #ccc;
   --gray-400: #aeaeae;
-  --gray-600: #666666;
-  --gray-disabled: #aaaaaa;
-
-  --gray-disabled-alpha-80: rgba(170, 170, 170, 0.8);
+  --gray-600: #666;
+  --gray-disabled: #aaa;
+  --gray-disabled-alpha-80: rgb(170 170 170 / 80%);
 
   /* Whites */
-  --white: #ffffff;
+  --white: #fff;
   --white-100: #f8f9fa;
   --white-200: #f0f4f8;
-  --white-alpha-95: rgba(255, 255, 255, 0.95);
+  --white-alpha-95: rgb(255 255 255 / 95%);
 }

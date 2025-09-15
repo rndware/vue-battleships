@@ -61,6 +61,7 @@ defineProps<{
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -71,6 +72,7 @@ defineProps<{
   100% {
     transform: translateY(0) rotate(180deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(180deg);
   }

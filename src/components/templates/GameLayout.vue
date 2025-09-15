@@ -28,9 +28,9 @@
 
     <div class="game-layout__message-container">
       <GameMessage v-if="message" :text="message.text" :type="message.type" />
-      <ButtonNew v-if="gameStatus === 'win' || gameStatus === 'lose'" @click="$emit('new-game')" />
+      <ButtonNew v-if="props.gameStatus !== 'in-progress'" @click="$emit('new-game')" />
     </div>
-    <ShipsStatus :ships="ships" />
+    <ShipsStatus :ships="ships" :ledMode="ledMode" />
   </div>
 </template>
 
@@ -65,6 +65,8 @@ defineEmits<{
 const disabled = computed(
   () => !isValidInput(inputValue.value, props.grid) || props.gameStatus !== 'in-progress',
 )
+const ledMode = computed(() => (props.gameStatus !== 'in-progress' ? 'on' : 'blink'))
+
 const inputValue = ref('')
 </script>
 
@@ -105,6 +107,7 @@ const inputValue = ref('')
   .game-layout {
     padding: 15px;
   }
+
   .game-layout__title {
     font-size: 2rem;
   }

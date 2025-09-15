@@ -1,5 +1,6 @@
 :root {
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-medium: rgba(0, 0, 0, 0.2);
-  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgb(0 0 0 / 10%);
+  --shadow-medium: rgb(0 0 0 / 20%);
+  --shadow-dark: rgb(0 0 0 / 30%);
+  --shadow-input: rgb(52 152 219 / 20%);
 }
