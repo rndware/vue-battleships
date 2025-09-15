@@ -26,7 +26,7 @@ const startGame = () => {
   padding: 1rem 2rem;
   font-size: 1.25rem;
   font-weight: bold;
-  background: var(--color-primary);
+  background: var(--color-primary-alpha-80);
   border: none;
   border-radius: var(--radius-btn);
   color: var(--white);
@@ -37,9 +37,9 @@ const startGame = () => {
 }
 
 .intro__start-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 10px 20px var(--shadow-dark);
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover-alpha-80);
 }
 
 .intro__start-button:active {

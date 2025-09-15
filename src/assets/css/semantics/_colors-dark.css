@@ -6,6 +6,7 @@
     --color-primary-active: var(--red-800);
     --color-on-primary: var(--white);
     --color-primary-alpha-80: var(--red-500-alpha-80);
+    --color-primary-hover-alpha-80: var(--red-800-alpha-80);
 
     /* Secondary */
     --color-secondary: var(--blue-500);
