@@ -51,8 +51,4 @@ const submit = () => {
     box-shadow var(--duration-fast)
 }
 
-.input-coordinate:focus {
-  outline: none;
-  border-color: var(--input-focus-color);
-}
 </style>
