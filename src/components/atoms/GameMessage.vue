@@ -42,20 +42,21 @@ defineProps<{
 .game-message--win {
   background: linear-gradient(45deg, var(--color-win), var(--color-win-light));
   font-size: 1.5rem;
-  animation: winPulse 1s ease-out infinite;
+  animation: win-pulse 1s ease-out infinite;
 }
 
 .game-message--lose {
   background: linear-gradient(45deg, var(--color-lose), var(--color-lose-light));
   font-size: 1.5rem;
-  animation: winPulse 1s ease-out infinite;
+  animation: win-pulse 1s ease-out infinite;
 }
 
-@keyframes winPulse {
+@keyframes win-pulse {
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }

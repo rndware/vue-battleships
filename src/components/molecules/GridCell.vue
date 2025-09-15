@@ -32,6 +32,7 @@ const handleClick = () => {
 <style scoped>
 .grid-cell {
   --base-font-size: var(--cell-font-size);
+
   border: 1px solid var(--cell-color-border);
   background: var(--cell-color-background);
   color: var(--cell-color);
@@ -49,13 +50,12 @@ const handleClick = () => {
 .grid-cell--pristine:hover:not(.grid-cell--disabled) {
   background: var(--cell-color-background-hover);
 
-  &:before {
+  &::before {
     content: '❌';
     position: absolute;
     inset: 0;
     font-size: var(--base-font-size);
     background: var(--cell-color-background-hover);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ const handleClick = () => {
 
 .grid-cell--hit {
   background: var(--color-hit);
-  animation: hitPulse var(--duration-slow) ease-out;
+  animation: hit-pulse var(--duration-slow) ease-out;
 }
 
 .grid-cell--miss {
@@ -77,44 +77,50 @@ const handleClick = () => {
 
 .grid-cell--sunk {
   background: var(--color-sunk-dark);
-  animation: sunkPulse var(--duration-slower) ease-out;
+  animation: sunk-pulse var(--duration-slower) ease-out;
 }
 
-@keyframes hitPulse {
+@keyframes hit-pulse {
   0% {
     font-size: var(--base-font-size);
   }
+
   50% {
     font-size: calc(var(--base-font-size) * 1.5);
     background: var(--color-hit-light);
   }
+
   100% {
     font-size: var(--base-font-size);
     transform: scale(1);
   }
 }
 
-@keyframes sunkPulse {
+@keyframes sunk-pulse {
   0% {
     font-size: var(--base-font-size);
   }
+
   25% {
     font-size: calc(var(--base-font-size) * 1.2);
     background: var(--color-sunk-light);
   }
+
   50% {
     font-size: calc(var(--base-font-size) * 1.5);
     background: var(--color-sunk);
   }
+
   75% {
     font-size: calc(var(--base-font-size) * 1.2);
   }
+
   100% {
     font-size: var(--base-font-size);
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .grid-cell {
     --base-font-size: var(--cell-font-size-sm);
   }

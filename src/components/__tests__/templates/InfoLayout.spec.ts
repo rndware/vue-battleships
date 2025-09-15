@@ -23,12 +23,12 @@ describe('Templates / InfoLayout.vue', () => {
         logo: '🚀',
         title: 'Title',
         subtitle: 'Subtitle',
-        animation: 'float__rotated',
+        animation: 'float-rotated',
       },
     })
 
     const logo = wrapper.find('.info__logo')
-    expect(logo.attributes('style')).toContain('--animation: float__rotated;')
+    expect(logo.attributes('style')).toContain('--animation: float-rotated;')
   })
 
   it('renders slot content', () => {

@@ -43,17 +43,16 @@ const submit = () => {
   font-weight: bold;
   color: var(--input-color);
   background: var(--input-background-color);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   border-radius: var(--radius-btn);
   width: 80px;
   transition:
     border-color var(--duration-fast),
-    box-shadow var(--duration-fast);
+    box-shadow var(--duration-fast)
 }
 
 .input-coordinate:focus {
   outline: none;
-  border-color: var(--neon-blue);
-  box-shadow: 0 0 0 3px var(--shadow-input);
+  border-color: var(--input-focus-color);
 }
 </style>

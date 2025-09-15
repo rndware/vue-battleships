@@ -15,7 +15,7 @@ describe('ErrorView', () => {
       logo: '🚢',
       title: 'Error!',
       subtitle: 'Looks like the app sunk instead!',
-      animation: 'float__rotated',
+      animation: 'float-rotated',
     })
   })
 })

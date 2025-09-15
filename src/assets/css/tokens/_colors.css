@@ -37,6 +37,9 @@
   --purple-400: #9b59b6;
   --purple-500: #8e44ad;
 
+  --purple-400-alpha-80: rgb(155 89 182 / 80%);
+  --purple-500-alpha-80: rgb(142 68 173 / 80%);
+
   /* Greens */
   --green-400: #2ecc71;
   --green-500: #27ae60;

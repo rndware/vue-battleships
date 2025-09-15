@@ -34,8 +34,7 @@ defineProps<{
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--ship-status-title-color);
-  margin-bottom: 0.75rem;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.75rem;
   text-align: center;
 }
 
@@ -68,7 +67,7 @@ defineProps<{
   border-radius: 50%;
   margin: 0 0.1rem;
   box-shadow: 0 0 8px var(--led-box-shadow);
-  animation: led-blink 4s infinite ease-in-out;
+  animation: led-blink var(--duration-very-long) infinite ease-in-out;
 }
 
 @keyframes led-blink {
@@ -77,6 +76,7 @@ defineProps<{
     opacity: 0.2;
     box-shadow: 0 0 4px var(--led-color-dark-blink);
   }
+
   50% {
     opacity: 1;
     box-shadow: 0 0 12px var(--led-color-light-blink);

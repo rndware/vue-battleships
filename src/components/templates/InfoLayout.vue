@@ -16,7 +16,7 @@ defineProps<{
   logo: string
   title: string
   subtitle: string
-  animation?: 'float' | 'float__rotated'
+  animation?: 'float' | 'float-rotated'
 }>()
 </script>
 
@@ -67,7 +67,7 @@ defineProps<{
   }
 }
 
-@keyframes float__rotated {
+@keyframes float-rotated {
   0%,
   100% {
     transform: translateY(0) rotate(180deg);

@@ -50,6 +50,7 @@
 
     --color-input-background: var(--gray-100);
     --color-input: var(--white);
+    --color-input-focus: var(--white);
 
     /* Ship Status */
     --color-ship-status-title: var(--red-500-alpha-80);

@@ -86,7 +86,7 @@ const getContent = (cell: GridCellData) => {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .game-board {
     grid-template-columns: var(--grid-header-size) repeat(var(--grid-cols), var(--cell-size-sm));
     grid-template-rows: var(--grid-header-size) repeat(var(--grid-rows), var(--cell-size-sm));

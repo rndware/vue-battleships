@@ -103,7 +103,7 @@ const inputValue = ref('')
   gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .game-layout {
     padding: 15px;
   }
