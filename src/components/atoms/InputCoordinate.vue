@@ -39,6 +39,8 @@ const submit = () => {
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
+  color: var(--input-color);
+  background: var(--input-background-color);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-btn);
   width: 80px;

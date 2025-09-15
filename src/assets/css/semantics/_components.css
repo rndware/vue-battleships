@@ -3,9 +3,9 @@
 
   --led-size: var(--size-led);
   --led-color-background: var(--red-500);
-  --led-box-shadow: var(rgba(255, 0, 0, 0.8));
-  --led-color-dark-blink: rgba(255, 0, 0, 0.2);
-  --led-color-light-blink: rgba(255, 0, 0, 1);
+  --led-box-shadow: var(--red-500-alpha-80);
+  --led-color-dark-blink: var(--red-600-alpha-20);
+  --led-color-light-blink: var(--red-600-alpha-10);
 
   --section-radius: var(--radius-section);
 
@@ -14,7 +14,7 @@
   --grid-header-font-size: var(--font-size-300);
 
   --cell-size: var(--size-cell-400);
-  --cell-color-background: var(--blue-300);
+  --cell-color-background: var(--color-grid-background);
   --cell-color: var(--white);
   --cell-color-background-hover: var(--blue-400);
   --cell-color-border: var(--light-blue-400);
@@ -27,11 +27,14 @@
   --health-dot-alive: var(--green-400);
 
   --ship-status-color: var(--blue-600);
-  --ship-status-title-color: var(--gray-600);
+  --ship-status-title-color: var(--color-ship-status-title);
   --ship-status-divider: var(--gray-100);
 
-  --layout-title-color: var(--blue-700);
+  --input-background-color: var(--color-input-background);
+  --input-color: var(--color-input);
+
+  --layout-title-color: var(--color-text-value);
   --layout-logo-font-size: var(--font-size-400);
   --layout-subtitle-color: var(--gray-600);
-  --layout-color-background: rgba(255, 255, 255, 0.95);
+  --layout-color-background: var(--color-background);
 }

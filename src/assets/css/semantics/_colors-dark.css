@@ -1,4 +1,4 @@
-:root {
+:root[data-theme='dark'] {
   /* Primary */
   --color-primary: var(--red-500);
   --color-primary-hover: var(--red-700);
@@ -38,30 +38,31 @@
   --color-lose-light: var(--black-800);
 
   /* Backgrounds & Surfaces */
-  --color-section-background: var(--white-100);
-  --color-surface: var(--white);
-  --color-surface-alt: var(--white-200);
-  --color-background: var(--white-alpha-95);
-  --color-background-alt: var(--white-200);
+  --color-section-background: var(--gray-100);
+  --color-surface: var(--black-900);
+  --color-surface-alt: var(--black-800);
+  --color-background: var(--black-alpha-95);
+  --color-background-alt: var(--black-800);
 
   /* Grid */
-  --color-grid-background: var(--blue-300);
+  --color-grid-background: var(--blue-700);
 
   /* Borders */
-  --color-border: var(--gray-300);
-  --color-border-muted: var(--gray-400);
+  --color-border: var(--gray-400);
+  --color-border-muted: var(--gray-600);
 
   /* Inputs */
-  --color-input-background: var(--white-alpha-95);
-  --color-input: var(--black);
+
+  --color-input-background: var(--gray-100);
+  --color-input: var(--white);
 
   /* Ship Status */
-  --color-ship-status-title: var(--blue-300);
+  --color-ship-status-title: var(--red-500-alpha-80);
 
   /* Text */
-  --color-text: var(--black-900);
-  --color-text-muted: var(--gray-600);
-  --color-text-value: var(--blue-700);
+  --color-text: var(--white);
+  --color-text-muted: var(--white-200);
+  --color-text-value: var(--blue-500);
   --color-text-disabled: var(--gray-disabled);
   --color-text-warning: var(--red-500);
 }

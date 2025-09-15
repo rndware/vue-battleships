@@ -16,7 +16,7 @@ defineEmits<{
 
 <style scoped>
 .btn-fire {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-alpha-80);
   color: var(--color-on-primary);
   font-weight: bold;
   border: none;

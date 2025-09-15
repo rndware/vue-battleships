@@ -27,8 +27,8 @@ const getContent = () => {
 
 <style scoped>
 .btn-mute {
-  background-color: var(--color-tertiary);
-  color: var(--color-surface);
+  background-color: var(--color-tertiary-alpha-80);
+  color: var(--color-on-primary);
   font-weight: bold;
   border: none;
   padding: 0.75rem 1.5rem;

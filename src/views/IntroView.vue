@@ -25,6 +25,7 @@ const startGame = () => {
 .intro__start-button {
   padding: 1rem 2rem;
   font-size: 1.25rem;
+  font-weight: bold;
   background: var(--color-primary);
   border: none;
   border-radius: var(--radius-btn);
