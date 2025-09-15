@@ -56,12 +56,12 @@
   --color-input: var(--black);
 
   /* Ship Status */
-  --color-ship-status-title: var(--blue-300);
+  --color-ship-status-title: var(--red-500-alpha-80);
 
   /* Text */
   --color-text: var(--black-900);
   --color-text-muted: var(--gray-600);
   --color-text-value: var(--blue-700);
-  --color-text-disabled: var(--gray-disabled);
+  --color-text-disabled: var(--gray-disabled-alpha-80);
   --color-text-warning: var(--red-500);
 }

@@ -4,7 +4,7 @@
     type="text"
     :placeholder="placeholder"
     :value="modelValue"
-    maxlength="3"
+    :maxlength="maxlength"
     @input="onInput"
     @keyup.enter="submit"
   />
@@ -16,6 +16,8 @@ defineProps<{
   placeholder?: string
 }>()
 
+const maxlength = 3;
+
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
   (e: 'submit'): void
@@ -24,7 +26,7 @@ const emit = defineEmits<{
 const onInput = (event: Event) => {
   const target = event.target as HTMLInputElement
   let value = target.value.toUpperCase()
-  value = value.replace(/[^A-J0-9]/g, '').substring(0, 3) // strip out invalid chars
+  value = value.replace(/[^A-J0-9]/g, '').substring(0, maxlength) // strip out invalid chars
   emit('update:modelValue', value)
 }
 
@@ -41,7 +43,7 @@ const submit = () => {
   font-weight: bold;
   color: var(--input-color);
   background: var(--input-background-color);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-btn);
   width: 80px;
   transition:

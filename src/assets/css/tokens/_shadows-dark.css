@@ -1,5 +1,7 @@
-:root[data-theme='dark'] {
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-medium: rgba(0, 0, 0, 0.2);
-  --shadow-dark: rgba(0, 0, 0, 0.3);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+  }
 }

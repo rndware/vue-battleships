@@ -4,7 +4,9 @@ A simple and fun Battleships game
 
 [👉Play now](https://rndware.github.io/vue-battleships/#/)
 
-<img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot.png" width="65%" />
+<img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot-light-mode.png" width="65%" />
+
+<img src="https://github.com/rndware/vue-battleships/blob/main/media/battleships-screenshot-dark-mode.png" width="65%" />
 
 ## Highlights
 
@@ -14,6 +16,7 @@ A simple and fun Battleships game
 - Achieved comprehensive test coverage using **Vitest**
 - Eliminated unnecessary third-party dependencies, reducing bundle size and minimising security vulnerabilities
 - Seperated grid logic from `useBattleshipsGame` to be more **SOLID**
+- Automatically switches between light and dark modes based upon system settings
 - Optimized Vue components for brevity and clarity using slots where possible
 - Includes immersive sound effects
 

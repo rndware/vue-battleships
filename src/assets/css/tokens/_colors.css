@@ -50,6 +50,8 @@
   --gray-600: #666666;
   --gray-disabled: #aaaaaa;
 
+  --gray-disabled-alpha-80: rgba(170, 170, 170, 0.8);
+
   /* Whites */
   --white: #ffffff;
   --white-100: #f8f9fa;

@@ -35,7 +35,7 @@ defineEmits<{
 }
 
 .btn-fire:disabled {
-  background-color: var(--gray-disabled);
+  background-color: var(--gray-disabled-alpha-80);
   cursor: not-allowed;
 }
 </style>
