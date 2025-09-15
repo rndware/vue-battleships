@@ -28,7 +28,7 @@ A simple and fun Battleships game
 
 ## Consider
 
-- Converting the `div`-based grid to a `table` for accessibility
+- Converting `div` based grid to a `table` for accessibility
 
 ## Project Setup
 
