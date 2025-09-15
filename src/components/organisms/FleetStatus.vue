@@ -2,7 +2,7 @@
   <section class="fleet-status">
     <h3 class="fleet-status__title">
       {{ title || 'Fleet Status' }}
-      <span class="led"></span>
+      <span class="led" :class="{ 'led--always-on': ledMode === 'on' }"></span>
     </h3>
     <div class="fleet-status__ship" v-for="ship in ships" :key="ship.name">
       <span class="fleet-status__ship-name"> {{ ship.name }} ({{ ship.size }} squares) </span>
@@ -17,6 +17,7 @@ import type { Ship } from '@/types'
 
 defineProps<{
   title?: string
+  ledMode?: 'on' | 'blink'
   ships: Ship[]
 }>()
 </script>
@@ -68,6 +69,10 @@ defineProps<{
   margin: 0 0.1rem;
   box-shadow: 0 0 8px var(--led-box-shadow);
   animation: led-blink var(--duration-very-long) infinite ease-in-out;
+}
+
+.led--always-on {
+  animation: none;
 }
 
 @keyframes led-blink {

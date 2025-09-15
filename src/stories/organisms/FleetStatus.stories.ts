@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import ShipStatus from '@/components/organisms/ShipsStatus.vue'
+import ShipStatus from '@/components/organisms/FleetStatus.vue'
 import type { Ship } from '@/types'
 
 const meta: Meta<typeof ShipStatus> = {

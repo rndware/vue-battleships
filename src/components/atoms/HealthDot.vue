@@ -16,10 +16,24 @@ defineProps<{
   margin: 0 2px;
   border-radius: 50%;
   background-color: var(--health-dot-empty);
-  transition: background-color var(--duration-fast);
+  position: relative;
+  overflow: hidden;
 }
 
-.health-dot--filled {
+.health-dot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   background-color: var(--health-dot-alive);
+  opacity: 0;
+  transition: opacity var(--duration-fast);
+}
+
+.health-dot--filled::after {
+  opacity: 1;
 }
 </style>

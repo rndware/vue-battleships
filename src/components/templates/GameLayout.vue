@@ -30,7 +30,7 @@
       <GameMessage v-if="message" :text="message.text" :type="message.type" />
       <ButtonNew v-if="props.gameStatus !== 'in-progress'" @click="$emit('new-game')" />
     </div>
-    <ShipsStatus :ships="ships" :ledMode="ledMode" />
+    <FleetStatus :ships="ships" :ledMode="ledMode" />
   </div>
 </template>
 
@@ -43,7 +43,7 @@ import { isValidInput } from '@/helpers/validations'
 import GameInfo from '@/components/organisms/GameInfo.vue'
 import GameBoard from '@/components/organisms/GameBoard.vue'
 import InputSection from '@/components/organisms/InputSection.vue'
-import ShipsStatus from '@/components/organisms/ShipsStatus.vue'
+import FleetStatus from '@/components/organisms/FleetStatus.vue'
 import ButtonNew from '@/components/atoms/ButtonNew.vue'
 import GameMessage from '@/components/atoms/GameMessage.vue'
 

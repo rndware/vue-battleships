@@ -16,3 +16,10 @@ p {
   line-height: 24px;
   color: rgb(46, 52, 56);
 }
+
+@media (prefers-color-scheme: dark) {
+  p {
+    color: rgb(208, 208, 208);
+  }
+}
+

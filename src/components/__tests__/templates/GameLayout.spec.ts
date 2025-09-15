@@ -7,7 +7,7 @@ import type { GridCellData, GameInfoData, Ship, MessageType } from '../../../typ
 vi.mock('@/components/organisms/GameInfo.vue', () => ({ default: { template: '<div />' } }))
 vi.mock('@/components/organisms/GameBoard.vue', () => ({ default: { template: '<div />' } }))
 vi.mock('@/components/organisms/InputSection.vue', () => ({ default: { template: '<div />' } }))
-vi.mock('@/components/organisms/ShipsStatus.vue', () => ({ default: { template: '<div />' } }))
+vi.mock('@/components/organisms/FleetStatus.vue', () => ({ default: { template: '<div />' } }))
 vi.mock('@/components/atoms/ButtonNew.vue', () => ({ default: { template: '<button />' } }))
 vi.mock('@/components/atoms/GameMessage.vue', () => ({ default: { template: '<div />' } }))
 
