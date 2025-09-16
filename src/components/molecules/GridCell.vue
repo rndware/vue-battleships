@@ -49,17 +49,17 @@ const handleClick = () => {
 
 .grid-cell--pristine:hover:not(.grid-cell--disabled) {
   background: var(--cell-color-background-hover);
+}
 
-  &::before {
-    content: '❌';
-    position: absolute;
-    inset: 0;
-    font-size: var(--base-font-size);
-    background: var(--cell-color-background-hover);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.grid-cell--pristine:hover:not(.grid-cell--disabled)::before {
+  content: '❌';
+  position: absolute;
+  inset: 0;
+  font-size: var(--base-font-size);
+  background: var(--cell-color-background-hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-cell--disabled {
