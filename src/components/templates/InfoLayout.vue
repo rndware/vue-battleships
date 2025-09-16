@@ -40,20 +40,20 @@ defineProps<{
 
 .info__logo {
   font-size: var(--font-size-800);
-  margin-bottom: var(--space-3);
+  margin-bottom: clamp(var(--space-2), 5vw, var(--space-3));
   animation: var(--animation) var(--duration-long) ease-in-out infinite;
 }
 
 .info__title {
-  font-size: var(--font-size-700);
+  font-size: clamp(var(--font-size-600), 5vw, var(--font-size-700));
   color: var(--layout-title-color);
-  margin-bottom: var(--space-3);
+  margin-bottom: clamp(var(--space-2), 5vw, var(--space-3));
 }
 
 .info__subtitle {
   color: var(--layout-subtitle-color);
-  font-size: var(--font-size-500);
-  margin-bottom: var(--space-8);
+  font-size: clamp(var(--font-size-400), 2vw, var(--font-size-500));
+  margin-bottom: clamp(var(--space-7), 5vw, var(--space-8));
 }
 
 @keyframes float {
