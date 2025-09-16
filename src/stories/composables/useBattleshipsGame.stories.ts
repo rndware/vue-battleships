@@ -47,7 +47,7 @@ export const DefaultGame: Story = {
 
         <!-- Game stats -->
         <div style="display: flex; justify-content: space-around; margin-bottom: 16px;">
-          <div>Shots Fired: <strong>{{ game.shotsFired }}</strong></div>
+          <div>Shots: <strong>{{ game.shotsFired }}</strong></div>
           <div>Shots Remaining: <strong>{{ game.shotsRemaining }}</strong></div>
           <div>Ships Remaining: <strong>{{ game.shipsRemaining }}</strong></div>
         </div>

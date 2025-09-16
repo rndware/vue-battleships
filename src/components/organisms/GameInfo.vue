@@ -1,7 +1,7 @@
 <template>
   <section class="game-info">
     <slot>
-      <InfoItem label="Shots Fired" :value="shotsFired" />
+      <InfoItem label="Shots" :value="shotsFired" />
       <InfoItem label="Hits" :value="hits" />
       <InfoItem label="Shots Remaining" :value="shotsRemaining" :warning="shotsRemaining <= 3" />
       <InfoItem label="Ships Remaining" :value="shipsRemaining" />

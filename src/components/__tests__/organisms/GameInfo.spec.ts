@@ -27,7 +27,7 @@ describe('Organisms / GameInfo.vue', () => {
     const wrapper = mount(GameInfo, { props })
     const items = wrapper.findAllComponents(InfoItem)
 
-    expect(items[0].props()).toMatchObject({ label: 'Shots Fired', value: 10 })
+    expect(items[0].props()).toMatchObject({ label: 'Shots', value: 10 })
     expect(items[1].props()).toMatchObject({ label: 'Hits', value: 4 })
     expect(items[2].props()).toMatchObject({ label: 'Shots Remaining', value: 2, warning: true })
     expect(items[3].props()).toMatchObject({ label: 'Ships Remaining', value: 3 })

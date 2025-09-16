@@ -14,7 +14,7 @@
 import { computed } from 'vue'
 import InputCoordinate from '@/components/atoms/InputCoordinate.vue'
 import ButtonFire from '@/components/atoms/ButtonFire.vue'
-import ButtonMute from '@/components/molecules/ButtonMute.vue';
+import ButtonMute from '@/components/molecules/ButtonMute.vue'
 
 const props = defineProps<{
   modelValue: string

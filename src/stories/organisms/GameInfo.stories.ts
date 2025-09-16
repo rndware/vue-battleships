@@ -78,7 +78,7 @@ export const UpdatedSlots: Story = {
     },
     template: `
       <GameInfo v-bind="args">
-        <InfoItem label="Shots Fired" :value="args.shotsFired" />
+        <InfoItem label="Shots" :value="args.shotsFired" />
         <InfoItem label="Hits" :value="args.hits" />
         <InfoItem label="Shots Remaining" :value="args.shotsRemaining" :warning="args.shotsRemaining <= 3" />
         <InfoItem label="Ships Remaining" :value="args.shipsRemaining" />
