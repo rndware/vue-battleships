@@ -84,7 +84,7 @@ const inputValue = ref('')
   min-width: 385px;
   max-width: 550px;
   margin: 10px auto;
-  padding: 30px 40px;
+  padding: clamp(15px, 5vw, 30px) clamp(15px, 4vw, 40px);
   background: var(--layout-color-background);
   border-radius: 15px;
   box-shadow: 0 20px 40px var(--shadow-light);
@@ -94,15 +94,15 @@ const inputValue = ref('')
 
 .game-layout__title {
   text-align: center;
-  font-size: var(--font-size-600);
+  font-size: clamp(var(--font-size-500), 5vw, var(--font-size-600));
   color: var(--layout-title-color);
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 5vw, 30px);
 }
 
 .game-layout__grid-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 5vw, 30px);
 }
 
 .game-layout__message-container {
@@ -110,15 +110,5 @@ const inputValue = ref('')
   flex-direction: column;
   align-items: center;
   gap: var(--space-4);
-}
-
-@media (width <= 768px) {
-  .game-layout {
-    padding: 15px;
-  }
-
-  .game-layout__title {
-    font-size: var(--font-size-500);
-  }
 }
 </style>

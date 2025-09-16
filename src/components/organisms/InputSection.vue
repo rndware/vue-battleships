@@ -42,7 +42,8 @@ const onSubmit = () => {
 <style scoped>
 .input-section {
   text-align: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: clamp(var(--space-5), 5vw, var(--space-6));
+  /* margin-bottom: var(--space-6); */
 }
 
 .input-group {

@@ -24,7 +24,7 @@ defineProps<{
 .game-info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: clamp(20px, 5vw, 40px);
   padding: 15px;
   background: var(--color-section-background);
   border-radius: var(--radius-section);
