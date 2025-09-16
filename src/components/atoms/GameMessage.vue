@@ -16,10 +16,10 @@ defineProps<{
 <style scoped>
 .game-message {
   text-align: center;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem var(--space-3);
+  border-radius: var(--space-2);
   font-weight: bold;
-  min-height: 2rem;
+  min-height: var(--space-5);
   transition: all var(--duration-slow) ease;
   display: flex;
   align-items: center;
@@ -42,13 +42,13 @@ defineProps<{
 .game-message--win {
   background: linear-gradient(45deg, var(--color-win), var(--color-win-light));
   font-size: 1.5rem;
-  animation: win-pulse 1s ease-out infinite;
+  animation: win-pulse var(--duration-mid) ease-out infinite;
 }
 
 .game-message--lose {
   background: linear-gradient(45deg, var(--color-lose), var(--color-lose-light));
   font-size: 1.5rem;
-  animation: win-pulse 1s ease-out infinite;
+  animation: win-pulse var(--duration-mid) ease-out infinite;
 }
 
 @keyframes win-pulse {

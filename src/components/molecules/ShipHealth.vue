@@ -16,6 +16,6 @@ defineProps<{
 <style scoped>
 .ship-health {
   display: flex;
-  gap: 0.25rem;
+  gap: var(--space-1);
 }
 </style>

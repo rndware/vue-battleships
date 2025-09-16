@@ -16,7 +16,7 @@ defineEmits<{
   color: var(--color-on-secondary);
   font-weight: bold;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem var(--space-5);
   border-radius: var(--radius-btn);
   cursor: pointer;
   transition: background-color var(--duration-fast);

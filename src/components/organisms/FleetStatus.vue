@@ -25,9 +25,9 @@ defineProps<{
 <style scoped>
 .fleet-status {
   background: var(--color-section-background);
-  padding: 1rem;
+  padding: var(--space-3);
   border-radius: var(--radius-section);
-  margin-top: 1rem;
+  margin-top: var(--space-3);
   box-shadow: inset 0 2px 4px var(--shadow-light);
 }
 
@@ -43,7 +43,7 @@ defineProps<{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.25rem 0;
+  padding: var(--space-1) 0;
   border-bottom: 1px solid var(--gray-100);
 }
 

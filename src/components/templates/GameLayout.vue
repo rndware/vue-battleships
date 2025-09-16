@@ -109,7 +109,7 @@ const inputValue = ref('')
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-4);
 }
 
 @media (width <= 768px) {

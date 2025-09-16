@@ -1,5 +1,12 @@
 :root {
   --font-family-sans: 'Segoe UI', tahoma, geneva, verdana, sans-serif;
-  --font-size-400: 18px;
-  --font-size-300: 16px;
+  --font-size-100: 0.9rem;    /* small text */
+  --font-size-200: 1rem;      /* default text */
+  --font-size-250: 1.2rem;    /* slightly larger text */
+  --font-size-300: 1.25rem;   /* medium text */
+  --font-size-400: 1.125rem;  /* original 18px */
+  --font-size-500: 1.5rem;    /* headings / emphasis */
+  --font-size-600: 2.5rem;    /* large headings */
+  --font-size-700: 4rem;      /* hero text */
+  --font-size-800: 5rem;      /* massive display */
 }

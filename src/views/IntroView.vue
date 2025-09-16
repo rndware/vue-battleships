@@ -23,7 +23,7 @@ const startGame = () => {
 
 <style scoped>
 .intro__start-button {
-  padding: 1rem 2rem;
+  padding: 1rem var(--space-5);
   font-size: 1.25rem;
   font-weight: bold;
   background: var(--color-primary-alpha-80);

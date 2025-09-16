@@ -42,15 +42,15 @@ const onSubmit = () => {
 <style scoped>
 .input-section {
   text-align: center;
-  margin-bottom: 2.75rem;
+  margin-bottom: var(--space-6);
 }
 
 .input-group {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-3);
   background: var(--color-section-background);
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem var(--space-4);
   border-radius: 1.5rem;
 }
 </style>
