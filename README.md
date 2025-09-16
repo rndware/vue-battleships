@@ -12,11 +12,11 @@ A simple and fun Battleships game
 
 - Built with **Vue 3**, **Composition API** and **TypeScript**
 - Architected scalable component library using **Atomic Design Principles** and **Single File Components (SFCs)**
-- Engineered for high configurability
+- Engineered to be **fully responsive** and configurable
 - Achieved comprehensive test coverage using **Vitest**
 - Eliminated unnecessary third-party dependencies, reducing bundle size and minimising security vulnerabilities
 - Seperated grid logic from `useBattleshipsGame` to be more **SOLID**
-- Automatically switches between light and dark modes based upon system settings
+- Automatically switches between light and dark mode based upon system settings
 - Optimized Vue components for brevity and clarity using slots where possible
 - Includes immersive sound effects
 
