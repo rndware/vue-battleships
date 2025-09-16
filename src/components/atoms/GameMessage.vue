@@ -41,13 +41,13 @@ defineProps<{
 
 .game-message--win {
   background: linear-gradient(45deg, var(--color-win), var(--color-win-light));
-  font-size: 1.5rem;
+  font-size: var(--font-size-500);
   animation: win-pulse var(--duration-mid) ease-out infinite;
 }
 
 .game-message--lose {
   background: linear-gradient(45deg, var(--color-lose), var(--color-lose-light));
-  font-size: 1.5rem;
+  font-size: var(--font-size-500);
   animation: win-pulse var(--duration-mid) ease-out infinite;
 }
 

@@ -32,7 +32,7 @@ defineProps<{
 }
 
 .fleet-status__title {
-  font-size: 1.2rem;
+  font-size: var(--font-size-250);
   font-weight: bold;
   color: var(--ship-status-title-color);
   margin: 0 0 0.75rem;

@@ -7,7 +7,7 @@
 <style scoped>
 .info-label {
   display: block;
-  font-size: 0.9rem;
+  font-size: var(--font-size-100);
   color: var(--color-text-muted);
   margin-bottom: 5px;
 }

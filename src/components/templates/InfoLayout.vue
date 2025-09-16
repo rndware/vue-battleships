@@ -39,20 +39,20 @@ defineProps<{
 }
 
 .info__logo {
-  font-size: 5rem;
+  font-size: var(--font-size-800);
   margin-bottom: var(--space-3);
   animation: var(--animation) var(--duration-long) ease-in-out infinite;
 }
 
 .info__title {
-  font-size: 4rem;
+  font-size: var(--font-size-700);
   color: var(--layout-title-color);
   margin-bottom: var(--space-3);
 }
 
 .info__subtitle {
   color: var(--layout-subtitle-color);
-  font-size: 1.5rem;
+  font-size: var(--font-size-500);
   margin-bottom: var(--space-8);
 }
 

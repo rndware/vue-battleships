@@ -38,7 +38,7 @@ const submit = () => {
 <style scoped>
 .input-coordinate {
   padding: 0.55rem var(--space-3);
-  font-size: 1rem;
+  font-size: var(--font-size-200);
   text-align: center;
   font-weight: bold;
   color: var(--input-color);

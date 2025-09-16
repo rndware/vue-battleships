@@ -94,7 +94,7 @@ const inputValue = ref('')
 
 .game-layout__title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--font-size-600);
   color: var(--layout-title-color);
   margin-bottom: 30px;
 }
@@ -118,7 +118,7 @@ const inputValue = ref('')
   }
 
   .game-layout__title {
-    font-size: 2rem;
+    font-size: var(--font-size-500);
   }
 }
 </style>
