@@ -11,7 +11,7 @@
 
   --grid-header-color: var(--blue-700);
   --grid-header-size: var(--size-cell-300);
-  --grid-header-font-size: var(--font-size-300);
+  --grid-header-font-size: var(--font-size-200);
 
   --cell-size: var(--size-cell-400);
   --cell-color-background: var(--color-grid-background);
