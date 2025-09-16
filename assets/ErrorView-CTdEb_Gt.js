@@ -1,1 +1,0 @@
-import{d as e,c as o,o as t,a,m as r}from"./index-oUwoRJ44.js";const s={class:"error-view"},l=e({__name:"ErrorView",setup(n){return(i,c)=>(t(),o("div",s,[a(r,{logo:"🚢",title:"Error!",subtitle:"Looks like the app sunk instead!",animation:"float-rotated"})]))}});export{l as default};
