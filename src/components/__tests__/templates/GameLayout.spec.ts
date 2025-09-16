@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import GameLayout from '../../../components/templates/GameLayout.vue'
 import type { GridCellData, GameInfoData, Ship, MessageType } from '../../../types'
@@ -15,6 +15,10 @@ describe('Templates / GameLayout.vue', () => {
   const grid: GridCellData[][] = [[{ hit: false, miss: false, sunk: false, ship: null }]]
   const info: GameInfoData = { shotsFired: 0, hits: 0, shotsRemaining: 5, shipsRemaining: 1 }
   const ships: Ship[] = [{ positions: [], name: 'Destroyer', size: 2, hits: 0 }]
+
+  beforeEach(() => {
+    window.scrollTo = vi.fn()
+  })
 
   it('renders the default title slot', () => {
     const wrapper = mount(GameLayout, {
@@ -76,5 +80,19 @@ describe('Templates / GameLayout.vue', () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const vm = wrapper.vm as any
     expect(vm.disabled).toBe(true)
+  })
+
+  it('calls scrollTo when gameStatus changes', async () => {
+    const wrapper = mount(GameLayout, {
+      props: { info, grid, ships, input: {}, gameStatus: 'in-progress' },
+    })
+
+    // Change prop to trigger the watch
+    await wrapper.setProps({ gameStatus: 'win' })
+
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    })
   })
 })

@@ -35,8 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 import type { MessageType, Coordinate, GridCellData, Ship, GameInfoData, GameStatus } from '@/types'
 import { isValidInput } from '@/helpers/validations'
@@ -66,6 +65,16 @@ const disabled = computed(
   () => !isValidInput(inputValue.value, props.grid) || props.gameStatus !== 'in-progress',
 )
 const ledMode = computed(() => (props.gameStatus !== 'in-progress' ? 'on' : 'blink'))
+
+watch(
+  () => props.gameStatus,
+  () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    })
+  },
+)
 
 const inputValue = ref('')
 </script>
