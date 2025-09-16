@@ -22,13 +22,13 @@ A simple and fun Battleships game
 
 ## TO-DO
 
-- Add `rgba` colors to CSS custom properties
-- Rationalize unit usage (`rem` vs `px`) across the app
-- Remove `any` types in unit tests
+- ~~Add `rgba` colors to CSS custom properties~~
+- Rationalize unit usage (`rem` vs `px`) and shadows across app
+- Remove `any` types for unit tests
 
 ## Consider
 
-- Converting `div` based grid to a `table` for accessibility
+- Converting `div` based grid to a `table` for accessibility?
 
 ## Project Setup
 

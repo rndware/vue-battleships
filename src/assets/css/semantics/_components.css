@@ -20,7 +20,7 @@
   --cell-color-border: var(--light-blue-400);
   --cell-size-sm: var(--size-cell-350);
   --cell-font-size: var(--font-size-400);
-  --cell-font-size-sm: var(--font-size-300);
+  --cell-font-size-sm: var(--font-size-200);
 
   --health-dot-size: var(--size-dot);
   --health-dot-empty: var(--gray-300);
